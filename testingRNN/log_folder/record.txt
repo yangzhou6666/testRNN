@@ -1,0 +1,2402 @@
+reset time at 0.00024199485778808594
+
+time:8.971389055252075
+samples: 1
+neuron coverage: 0.550
+cell coverage: 0.000
+gate coverage: 0.108
+positive sequence coverage: 0.004
+negative sequence coverage: 0.004
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:9.605190992355347
+samples: 2
+neuron coverage: 0.560
+cell coverage: 0.000
+gate coverage: 0.122
+positive sequence coverage: 0.008
+negative sequence coverage: 0.008
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:10.20588493347168
+samples: 3
+neuron coverage: 0.560
+cell coverage: 0.000
+gate coverage: 0.178
+positive sequence coverage: 0.012
+negative sequence coverage: 0.012
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:10.81550407409668
+samples: 4
+neuron coverage: 0.560
+cell coverage: 0.000
+gate coverage: 0.188
+positive sequence coverage: 0.016
+negative sequence coverage: 0.016
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:11.493709087371826
+samples: 5
+neuron coverage: 1.000
+cell coverage: 0.008
+gate coverage: 0.410
+positive sequence coverage: 0.021
+negative sequence coverage: 0.021
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:12.098324060440063
+samples: 6
+neuron coverage: 1.000
+cell coverage: 0.018
+gate coverage: 0.480
+positive sequence coverage: 0.025
+negative sequence coverage: 0.025
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:12.705826044082642
+samples: 7
+neuron coverage: 1.000
+cell coverage: 0.028
+gate coverage: 0.534
+positive sequence coverage: 0.029
+negative sequence coverage: 0.029
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:13.30497407913208
+samples: 8
+neuron coverage: 1.000
+cell coverage: 0.036
+gate coverage: 0.562
+positive sequence coverage: 0.029
+negative sequence coverage: 0.029
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:13.937490940093994
+samples: 9
+neuron coverage: 1.000
+cell coverage: 0.040
+gate coverage: 0.562
+positive sequence coverage: 0.033
+negative sequence coverage: 0.033
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:14.565401077270508
+samples: 10
+neuron coverage: 1.000
+cell coverage: 0.044
+gate coverage: 0.562
+positive sequence coverage: 0.037
+negative sequence coverage: 0.037
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:15.18733024597168
+samples: 11
+neuron coverage: 1.000
+cell coverage: 0.046
+gate coverage: 0.562
+positive sequence coverage: 0.041
+negative sequence coverage: 0.041
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:15.790354013442993
+samples: 12
+neuron coverage: 1.000
+cell coverage: 0.052
+gate coverage: 0.562
+positive sequence coverage: 0.045
+negative sequence coverage: 0.045
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:16.5258891582489
+samples: 13
+neuron coverage: 1.000
+cell coverage: 0.056
+gate coverage: 0.562
+positive sequence coverage: 0.049
+negative sequence coverage: 0.049
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:17.110092163085938
+samples: 14
+neuron coverage: 1.000
+cell coverage: 0.058
+gate coverage: 0.562
+positive sequence coverage: 0.053
+negative sequence coverage: 0.053
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:17.698665142059326
+samples: 15
+neuron coverage: 1.000
+cell coverage: 0.066
+gate coverage: 0.562
+positive sequence coverage: 0.058
+negative sequence coverage: 0.058
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:18.279526948928833
+samples: 16
+neuron coverage: 1.000
+cell coverage: 0.068
+gate coverage: 0.562
+positive sequence coverage: 0.058
+negative sequence coverage: 0.058
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:18.879103183746338
+samples: 17
+neuron coverage: 1.000
+cell coverage: 0.070
+gate coverage: 0.562
+positive sequence coverage: 0.062
+negative sequence coverage: 0.062
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:19.466968059539795
+samples: 18
+neuron coverage: 1.000
+cell coverage: 0.074
+gate coverage: 0.562
+positive sequence coverage: 0.062
+negative sequence coverage: 0.066
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:20.046995162963867
+samples: 19
+neuron coverage: 1.000
+cell coverage: 0.076
+gate coverage: 0.562
+positive sequence coverage: 0.062
+negative sequence coverage: 0.066
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:20.636672019958496
+samples: 20
+neuron coverage: 1.000
+cell coverage: 0.078
+gate coverage: 0.562
+positive sequence coverage: 0.062
+negative sequence coverage: 0.066
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:21.221846103668213
+samples: 21
+neuron coverage: 1.000
+cell coverage: 0.082
+gate coverage: 0.562
+positive sequence coverage: 0.066
+negative sequence coverage: 0.066
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:21.81298589706421
+samples: 22
+neuron coverage: 1.000
+cell coverage: 0.082
+gate coverage: 0.562
+positive sequence coverage: 0.070
+negative sequence coverage: 0.070
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:22.392817974090576
+samples: 23
+neuron coverage: 1.000
+cell coverage: 0.082
+gate coverage: 0.562
+positive sequence coverage: 0.074
+negative sequence coverage: 0.074
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:22.991563081741333
+samples: 24
+neuron coverage: 1.000
+cell coverage: 0.084
+gate coverage: 0.562
+positive sequence coverage: 0.074
+negative sequence coverage: 0.078
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:23.594077110290527
+samples: 25
+neuron coverage: 1.000
+cell coverage: 0.086
+gate coverage: 0.562
+positive sequence coverage: 0.078
+negative sequence coverage: 0.082
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:24.180269241333008
+samples: 26
+neuron coverage: 1.000
+cell coverage: 0.086
+gate coverage: 0.562
+positive sequence coverage: 0.078
+negative sequence coverage: 0.082
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:24.761574029922485
+samples: 27
+neuron coverage: 1.000
+cell coverage: 0.088
+gate coverage: 0.562
+positive sequence coverage: 0.078
+negative sequence coverage: 0.082
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:25.34961223602295
+samples: 28
+neuron coverage: 1.000
+cell coverage: 0.090
+gate coverage: 0.562
+positive sequence coverage: 0.078
+negative sequence coverage: 0.082
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:25.964054107666016
+samples: 29
+neuron coverage: 1.000
+cell coverage: 0.110
+gate coverage: 0.622
+positive sequence coverage: 0.082
+negative sequence coverage: 0.086
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:26.558557987213135
+samples: 30
+neuron coverage: 1.000
+cell coverage: 0.128
+gate coverage: 0.630
+positive sequence coverage: 0.086
+negative sequence coverage: 0.091
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:27.147783994674683
+samples: 31
+neuron coverage: 1.000
+cell coverage: 0.146
+gate coverage: 0.648
+positive sequence coverage: 0.091
+negative sequence coverage: 0.095
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:27.735125064849854
+samples: 32
+neuron coverage: 1.000
+cell coverage: 0.158
+gate coverage: 0.658
+positive sequence coverage: 0.095
+negative sequence coverage: 0.099
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:28.347885131835938
+samples: 33
+neuron coverage: 1.000
+cell coverage: 0.160
+gate coverage: 0.658
+positive sequence coverage: 0.095
+negative sequence coverage: 0.099
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:28.960301160812378
+samples: 34
+neuron coverage: 1.000
+cell coverage: 0.170
+gate coverage: 0.658
+positive sequence coverage: 0.099
+negative sequence coverage: 0.103
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:29.591387033462524
+samples: 35
+neuron coverage: 1.000
+cell coverage: 0.176
+gate coverage: 0.658
+positive sequence coverage: 0.099
+negative sequence coverage: 0.103
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:30.170495986938477
+samples: 36
+neuron coverage: 1.000
+cell coverage: 0.176
+gate coverage: 0.658
+positive sequence coverage: 0.099
+negative sequence coverage: 0.103
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:30.809832096099854
+samples: 37
+neuron coverage: 1.000
+cell coverage: 0.178
+gate coverage: 0.866
+positive sequence coverage: 0.099
+negative sequence coverage: 0.103
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:31.43637990951538
+samples: 38
+neuron coverage: 1.000
+cell coverage: 0.182
+gate coverage: 0.924
+positive sequence coverage: 0.103
+negative sequence coverage: 0.103
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:32.06427192687988
+samples: 39
+neuron coverage: 1.000
+cell coverage: 0.184
+gate coverage: 0.932
+positive sequence coverage: 0.107
+negative sequence coverage: 0.107
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:32.6656060218811
+samples: 40
+neuron coverage: 1.000
+cell coverage: 0.188
+gate coverage: 0.960
+positive sequence coverage: 0.107
+negative sequence coverage: 0.107
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:33.29529929161072
+samples: 41
+neuron coverage: 1.000
+cell coverage: 0.204
+gate coverage: 0.974
+positive sequence coverage: 0.111
+negative sequence coverage: 0.111
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:33.90688705444336
+samples: 42
+neuron coverage: 1.000
+cell coverage: 0.220
+gate coverage: 0.986
+positive sequence coverage: 0.115
+negative sequence coverage: 0.115
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:34.534351110458374
+samples: 43
+neuron coverage: 1.000
+cell coverage: 0.240
+gate coverage: 0.990
+positive sequence coverage: 0.119
+negative sequence coverage: 0.119
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:35.127814054489136
+samples: 44
+neuron coverage: 1.000
+cell coverage: 0.248
+gate coverage: 0.996
+positive sequence coverage: 0.119
+negative sequence coverage: 0.119
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:35.78809714317322
+samples: 45
+neuron coverage: 1.000
+cell coverage: 0.256
+gate coverage: 0.996
+positive sequence coverage: 0.119
+negative sequence coverage: 0.119
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:36.445757150650024
+samples: 46
+neuron coverage: 1.000
+cell coverage: 0.278
+gate coverage: 0.998
+positive sequence coverage: 0.123
+negative sequence coverage: 0.123
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:37.06747817993164
+samples: 47
+neuron coverage: 1.000
+cell coverage: 0.298
+gate coverage: 0.998
+positive sequence coverage: 0.128
+negative sequence coverage: 0.128
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:37.68338322639465
+samples: 48
+neuron coverage: 1.000
+cell coverage: 0.328
+gate coverage: 0.998
+positive sequence coverage: 0.132
+negative sequence coverage: 0.132
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:38.46179699897766
+samples: 49
+neuron coverage: 1.000
+cell coverage: 0.334
+gate coverage: 0.998
+positive sequence coverage: 0.132
+negative sequence coverage: 0.136
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:39.08809208869934
+samples: 50
+neuron coverage: 1.000
+cell coverage: 0.342
+gate coverage: 0.998
+positive sequence coverage: 0.132
+negative sequence coverage: 0.136
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:39.69010806083679
+samples: 51
+neuron coverage: 1.000
+cell coverage: 0.348
+gate coverage: 1.000
+positive sequence coverage: 0.136
+negative sequence coverage: 0.140
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:40.294297218322754
+samples: 52
+neuron coverage: 1.000
+cell coverage: 0.356
+gate coverage: 1.000
+positive sequence coverage: 0.140
+negative sequence coverage: 0.144
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:40.88650298118591
+samples: 53
+neuron coverage: 1.000
+cell coverage: 0.356
+gate coverage: 1.000
+positive sequence coverage: 0.140
+negative sequence coverage: 0.144
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:41.47279500961304
+samples: 54
+neuron coverage: 1.000
+cell coverage: 0.356
+gate coverage: 1.000
+positive sequence coverage: 0.140
+negative sequence coverage: 0.144
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:42.05670094490051
+samples: 55
+neuron coverage: 1.000
+cell coverage: 0.358
+gate coverage: 1.000
+positive sequence coverage: 0.140
+negative sequence coverage: 0.148
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:42.63945198059082
+samples: 56
+neuron coverage: 1.000
+cell coverage: 0.358
+gate coverage: 1.000
+positive sequence coverage: 0.140
+negative sequence coverage: 0.148
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:43.27055501937866
+samples: 57
+neuron coverage: 1.000
+cell coverage: 0.362
+gate coverage: 1.000
+positive sequence coverage: 0.144
+negative sequence coverage: 0.152
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:43.881155252456665
+samples: 58
+neuron coverage: 1.000
+cell coverage: 0.364
+gate coverage: 1.000
+positive sequence coverage: 0.144
+negative sequence coverage: 0.152
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:44.48492503166199
+samples: 59
+neuron coverage: 1.000
+cell coverage: 0.378
+gate coverage: 1.000
+positive sequence coverage: 0.144
+negative sequence coverage: 0.156
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:45.0786030292511
+samples: 60
+neuron coverage: 1.000
+cell coverage: 0.382
+gate coverage: 1.000
+positive sequence coverage: 0.148
+negative sequence coverage: 0.160
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:45.66715407371521
+samples: 61
+neuron coverage: 1.000
+cell coverage: 0.384
+gate coverage: 1.000
+positive sequence coverage: 0.152
+negative sequence coverage: 0.165
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:46.25360703468323
+samples: 62
+neuron coverage: 1.000
+cell coverage: 0.384
+gate coverage: 1.000
+positive sequence coverage: 0.156
+negative sequence coverage: 0.169
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:46.857633113861084
+samples: 63
+neuron coverage: 1.000
+cell coverage: 0.384
+gate coverage: 1.000
+positive sequence coverage: 0.156
+negative sequence coverage: 0.169
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:47.448314905166626
+samples: 64
+neuron coverage: 1.000
+cell coverage: 0.388
+gate coverage: 1.000
+positive sequence coverage: 0.160
+negative sequence coverage: 0.169
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:48.03608822822571
+samples: 65
+neuron coverage: 1.000
+cell coverage: 0.392
+gate coverage: 1.000
+positive sequence coverage: 0.165
+negative sequence coverage: 0.173
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:48.621926069259644
+samples: 66
+neuron coverage: 1.000
+cell coverage: 0.392
+gate coverage: 1.000
+positive sequence coverage: 0.165
+negative sequence coverage: 0.173
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:49.22085523605347
+samples: 67
+neuron coverage: 1.000
+cell coverage: 0.396
+gate coverage: 1.000
+positive sequence coverage: 0.165
+negative sequence coverage: 0.173
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:49.821248054504395
+samples: 68
+neuron coverage: 1.000
+cell coverage: 0.400
+gate coverage: 1.000
+positive sequence coverage: 0.169
+negative sequence coverage: 0.177
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:50.41454219818115
+samples: 69
+neuron coverage: 1.000
+cell coverage: 0.402
+gate coverage: 1.000
+positive sequence coverage: 0.173
+negative sequence coverage: 0.181
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:51.00725722312927
+samples: 70
+neuron coverage: 1.000
+cell coverage: 0.404
+gate coverage: 1.000
+positive sequence coverage: 0.177
+negative sequence coverage: 0.185
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:51.60421800613403
+samples: 71
+neuron coverage: 1.000
+cell coverage: 0.404
+gate coverage: 1.000
+positive sequence coverage: 0.177
+negative sequence coverage: 0.185
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:52.197864055633545
+samples: 72
+neuron coverage: 1.000
+cell coverage: 0.406
+gate coverage: 1.000
+positive sequence coverage: 0.181
+negative sequence coverage: 0.189
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:52.80195212364197
+samples: 73
+neuron coverage: 1.000
+cell coverage: 0.406
+gate coverage: 1.000
+positive sequence coverage: 0.185
+negative sequence coverage: 0.193
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:53.38545203208923
+samples: 74
+neuron coverage: 1.000
+cell coverage: 0.412
+gate coverage: 1.000
+positive sequence coverage: 0.185
+negative sequence coverage: 0.193
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:53.97937321662903
+samples: 75
+neuron coverage: 1.000
+cell coverage: 0.416
+gate coverage: 1.000
+positive sequence coverage: 0.185
+negative sequence coverage: 0.198
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:54.570451974868774
+samples: 76
+neuron coverage: 1.000
+cell coverage: 0.418
+gate coverage: 1.000
+positive sequence coverage: 0.185
+negative sequence coverage: 0.198
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:55.16527318954468
+samples: 77
+neuron coverage: 1.000
+cell coverage: 0.418
+gate coverage: 1.000
+positive sequence coverage: 0.189
+negative sequence coverage: 0.202
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:55.75739026069641
+samples: 78
+neuron coverage: 1.000
+cell coverage: 0.420
+gate coverage: 1.000
+positive sequence coverage: 0.189
+negative sequence coverage: 0.202
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:56.35017704963684
+samples: 79
+neuron coverage: 1.000
+cell coverage: 0.420
+gate coverage: 1.000
+positive sequence coverage: 0.189
+negative sequence coverage: 0.202
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:56.94975399971008
+samples: 80
+neuron coverage: 1.000
+cell coverage: 0.426
+gate coverage: 1.000
+positive sequence coverage: 0.189
+negative sequence coverage: 0.202
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:57.563775062561035
+samples: 81
+neuron coverage: 1.000
+cell coverage: 0.434
+gate coverage: 1.000
+positive sequence coverage: 0.189
+negative sequence coverage: 0.202
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:58.193132162094116
+samples: 82
+neuron coverage: 1.000
+cell coverage: 0.436
+gate coverage: 1.000
+positive sequence coverage: 0.193
+negative sequence coverage: 0.202
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:58.83501601219177
+samples: 83
+neuron coverage: 1.000
+cell coverage: 0.442
+gate coverage: 1.000
+positive sequence coverage: 0.198
+negative sequence coverage: 0.202
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:59.44582200050354
+samples: 84
+neuron coverage: 1.000
+cell coverage: 0.442
+gate coverage: 1.000
+positive sequence coverage: 0.202
+negative sequence coverage: 0.206
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:60.048269271850586
+samples: 85
+neuron coverage: 1.000
+cell coverage: 0.444
+gate coverage: 1.000
+positive sequence coverage: 0.202
+negative sequence coverage: 0.206
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:60.63848519325256
+samples: 86
+neuron coverage: 1.000
+cell coverage: 0.444
+gate coverage: 1.000
+positive sequence coverage: 0.202
+negative sequence coverage: 0.206
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:61.22956919670105
+samples: 87
+neuron coverage: 1.000
+cell coverage: 0.446
+gate coverage: 1.000
+positive sequence coverage: 0.206
+negative sequence coverage: 0.210
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:61.82408094406128
+samples: 88
+neuron coverage: 1.000
+cell coverage: 0.446
+gate coverage: 1.000
+positive sequence coverage: 0.206
+negative sequence coverage: 0.210
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:62.44294810295105
+samples: 89
+neuron coverage: 1.000
+cell coverage: 0.450
+gate coverage: 1.000
+positive sequence coverage: 0.210
+negative sequence coverage: 0.214
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:63.04277205467224
+samples: 90
+neuron coverage: 1.000
+cell coverage: 0.462
+gate coverage: 1.000
+positive sequence coverage: 0.214
+negative sequence coverage: 0.218
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:63.64259910583496
+samples: 91
+neuron coverage: 1.000
+cell coverage: 0.474
+gate coverage: 1.000
+positive sequence coverage: 0.218
+negative sequence coverage: 0.222
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:64.24921107292175
+samples: 92
+neuron coverage: 1.000
+cell coverage: 0.478
+gate coverage: 1.000
+positive sequence coverage: 0.222
+negative sequence coverage: 0.222
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:64.86184811592102
+samples: 93
+neuron coverage: 1.000
+cell coverage: 0.478
+gate coverage: 1.000
+positive sequence coverage: 0.222
+negative sequence coverage: 0.222
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:65.46580410003662
+samples: 94
+neuron coverage: 1.000
+cell coverage: 0.482
+gate coverage: 1.000
+positive sequence coverage: 0.226
+negative sequence coverage: 0.222
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:66.06901502609253
+samples: 95
+neuron coverage: 1.000
+cell coverage: 0.482
+gate coverage: 1.000
+positive sequence coverage: 0.230
+negative sequence coverage: 0.226
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:66.67232203483582
+samples: 96
+neuron coverage: 1.000
+cell coverage: 0.486
+gate coverage: 1.000
+positive sequence coverage: 0.230
+negative sequence coverage: 0.226
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:67.26161813735962
+samples: 97
+neuron coverage: 1.000
+cell coverage: 0.486
+gate coverage: 1.000
+positive sequence coverage: 0.230
+negative sequence coverage: 0.226
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:67.85736918449402
+samples: 98
+neuron coverage: 1.000
+cell coverage: 0.486
+gate coverage: 1.000
+positive sequence coverage: 0.235
+negative sequence coverage: 0.230
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:68.45009112358093
+samples: 99
+neuron coverage: 1.000
+cell coverage: 0.486
+gate coverage: 1.000
+positive sequence coverage: 0.235
+negative sequence coverage: 0.230
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:69.0375030040741
+samples: 100
+neuron coverage: 1.000
+cell coverage: 0.486
+gate coverage: 1.000
+positive sequence coverage: 0.235
+negative sequence coverage: 0.230
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:69.64151406288147
+samples: 101
+neuron coverage: 1.000
+cell coverage: 0.486
+gate coverage: 1.000
+positive sequence coverage: 0.235
+negative sequence coverage: 0.230
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:70.24408984184265
+samples: 102
+neuron coverage: 1.000
+cell coverage: 0.486
+gate coverage: 1.000
+positive sequence coverage: 0.235
+negative sequence coverage: 0.230
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:70.85493803024292
+samples: 103
+neuron coverage: 1.000
+cell coverage: 0.486
+gate coverage: 1.000
+positive sequence coverage: 0.235
+negative sequence coverage: 0.230
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:71.45457410812378
+samples: 104
+neuron coverage: 1.000
+cell coverage: 0.486
+gate coverage: 1.000
+positive sequence coverage: 0.235
+negative sequence coverage: 0.230
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:72.05489110946655
+samples: 105
+neuron coverage: 1.000
+cell coverage: 0.488
+gate coverage: 1.000
+positive sequence coverage: 0.239
+negative sequence coverage: 0.235
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:72.64826202392578
+samples: 106
+neuron coverage: 1.000
+cell coverage: 0.488
+gate coverage: 1.000
+positive sequence coverage: 0.239
+negative sequence coverage: 0.235
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:73.25161409378052
+samples: 107
+neuron coverage: 1.000
+cell coverage: 0.492
+gate coverage: 1.000
+positive sequence coverage: 0.239
+negative sequence coverage: 0.235
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:73.84843707084656
+samples: 108
+neuron coverage: 1.000
+cell coverage: 0.492
+gate coverage: 1.000
+positive sequence coverage: 0.239
+negative sequence coverage: 0.239
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:74.44998812675476
+samples: 109
+neuron coverage: 1.000
+cell coverage: 0.496
+gate coverage: 1.000
+positive sequence coverage: 0.239
+negative sequence coverage: 0.239
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:75.0554850101471
+samples: 110
+neuron coverage: 1.000
+cell coverage: 0.498
+gate coverage: 1.000
+positive sequence coverage: 0.239
+negative sequence coverage: 0.239
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:75.69831418991089
+samples: 111
+neuron coverage: 1.000
+cell coverage: 0.502
+gate coverage: 1.000
+positive sequence coverage: 0.239
+negative sequence coverage: 0.239
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:76.29629802703857
+samples: 112
+neuron coverage: 1.000
+cell coverage: 0.506
+gate coverage: 1.000
+positive sequence coverage: 0.239
+negative sequence coverage: 0.239
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:76.9206919670105
+samples: 113
+neuron coverage: 1.000
+cell coverage: 0.506
+gate coverage: 1.000
+positive sequence coverage: 0.243
+negative sequence coverage: 0.243
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:77.5226480960846
+samples: 114
+neuron coverage: 1.000
+cell coverage: 0.506
+gate coverage: 1.000
+positive sequence coverage: 0.247
+negative sequence coverage: 0.247
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:78.12210011482239
+samples: 115
+neuron coverage: 1.000
+cell coverage: 0.506
+gate coverage: 1.000
+positive sequence coverage: 0.251
+negative sequence coverage: 0.251
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:78.71931028366089
+samples: 116
+neuron coverage: 1.000
+cell coverage: 0.506
+gate coverage: 1.000
+positive sequence coverage: 0.251
+negative sequence coverage: 0.251
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:79.35026216506958
+samples: 117
+neuron coverage: 1.000
+cell coverage: 0.514
+gate coverage: 1.000
+positive sequence coverage: 0.251
+negative sequence coverage: 0.251
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:79.96642518043518
+samples: 118
+neuron coverage: 1.000
+cell coverage: 0.520
+gate coverage: 1.000
+positive sequence coverage: 0.251
+negative sequence coverage: 0.251
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:80.5806450843811
+samples: 119
+neuron coverage: 1.000
+cell coverage: 0.526
+gate coverage: 1.000
+positive sequence coverage: 0.255
+negative sequence coverage: 0.255
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:81.19219422340393
+samples: 120
+neuron coverage: 1.000
+cell coverage: 0.528
+gate coverage: 1.000
+positive sequence coverage: 0.255
+negative sequence coverage: 0.255
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:81.79463195800781
+samples: 121
+neuron coverage: 1.000
+cell coverage: 0.528
+gate coverage: 1.000
+positive sequence coverage: 0.255
+negative sequence coverage: 0.255
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:82.3938992023468
+samples: 122
+neuron coverage: 1.000
+cell coverage: 0.528
+gate coverage: 1.000
+positive sequence coverage: 0.255
+negative sequence coverage: 0.255
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:83.01078820228577
+samples: 123
+neuron coverage: 1.000
+cell coverage: 0.528
+gate coverage: 1.000
+positive sequence coverage: 0.255
+negative sequence coverage: 0.255
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:83.61626195907593
+samples: 124
+neuron coverage: 1.000
+cell coverage: 0.528
+gate coverage: 1.000
+positive sequence coverage: 0.259
+negative sequence coverage: 0.255
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:84.22248101234436
+samples: 125
+neuron coverage: 1.000
+cell coverage: 0.538
+gate coverage: 1.000
+positive sequence coverage: 0.259
+negative sequence coverage: 0.255
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:84.82466316223145
+samples: 126
+neuron coverage: 1.000
+cell coverage: 0.544
+gate coverage: 1.000
+positive sequence coverage: 0.259
+negative sequence coverage: 0.255
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:85.45106911659241
+samples: 127
+neuron coverage: 1.000
+cell coverage: 0.546
+gate coverage: 1.000
+positive sequence coverage: 0.259
+negative sequence coverage: 0.255
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:86.08519196510315
+samples: 128
+neuron coverage: 1.000
+cell coverage: 0.550
+gate coverage: 1.000
+positive sequence coverage: 0.259
+negative sequence coverage: 0.255
+adv. examples: 0
+adv. rate: 0.000
+average perturbation: 0
+minimum perturbation: 0
+
+time:86.68860006332397
+samples: 129
+neuron coverage: 1.000
+cell coverage: 0.550
+gate coverage: 1.000
+positive sequence coverage: 0.259
+negative sequence coverage: 0.255
+adv. examples: 1
+adv. rate: 0.008
+average perturbation: 0.047
+minimum perturbation: 0.047
+
+time:87.32732009887695
+samples: 130
+neuron coverage: 1.000
+cell coverage: 0.550
+gate coverage: 1.000
+positive sequence coverage: 0.259
+negative sequence coverage: 0.255
+adv. examples: 1
+adv. rate: 0.008
+average perturbation: 0.047
+minimum perturbation: 0.047
+
+time:87.94566011428833
+samples: 131
+neuron coverage: 1.000
+cell coverage: 0.552
+gate coverage: 1.000
+positive sequence coverage: 0.259
+negative sequence coverage: 0.255
+adv. examples: 2
+adv. rate: 0.015
+average perturbation: 0.099
+minimum perturbation: 0.047
+
+time:88.55302810668945
+samples: 132
+neuron coverage: 1.000
+cell coverage: 0.552
+gate coverage: 1.000
+positive sequence coverage: 0.259
+negative sequence coverage: 0.255
+adv. examples: 3
+adv. rate: 0.023
+average perturbation: 0.118
+minimum perturbation: 0.047
+
+time:89.20986819267273
+samples: 133
+neuron coverage: 1.000
+cell coverage: 0.552
+gate coverage: 1.000
+positive sequence coverage: 0.259
+negative sequence coverage: 0.259
+adv. examples: 3
+adv. rate: 0.023
+average perturbation: 0.118
+minimum perturbation: 0.047
+
+time:89.85636687278748
+samples: 134
+neuron coverage: 1.000
+cell coverage: 0.552
+gate coverage: 1.000
+positive sequence coverage: 0.259
+negative sequence coverage: 0.259
+adv. examples: 3
+adv. rate: 0.022
+average perturbation: 0.118
+minimum perturbation: 0.047
+
+time:90.47644710540771
+samples: 135
+neuron coverage: 1.000
+cell coverage: 0.552
+gate coverage: 1.000
+positive sequence coverage: 0.259
+negative sequence coverage: 0.259
+adv. examples: 3
+adv. rate: 0.022
+average perturbation: 0.118
+minimum perturbation: 0.047
+
+time:91.08573007583618
+samples: 136
+neuron coverage: 1.000
+cell coverage: 0.552
+gate coverage: 1.000
+positive sequence coverage: 0.259
+negative sequence coverage: 0.259
+adv. examples: 3
+adv. rate: 0.022
+average perturbation: 0.118
+minimum perturbation: 0.047
+
+time:91.71212196350098
+samples: 137
+neuron coverage: 1.000
+cell coverage: 0.554
+gate coverage: 1.000
+positive sequence coverage: 0.259
+negative sequence coverage: 0.259
+adv. examples: 3
+adv. rate: 0.022
+average perturbation: 0.118
+minimum perturbation: 0.047
+
+time:92.34068417549133
+samples: 138
+neuron coverage: 1.000
+cell coverage: 0.556
+gate coverage: 1.000
+positive sequence coverage: 0.263
+negative sequence coverage: 0.263
+adv. examples: 3
+adv. rate: 0.022
+average perturbation: 0.118
+minimum perturbation: 0.047
+
+time:92.96225309371948
+samples: 139
+neuron coverage: 1.000
+cell coverage: 0.558
+gate coverage: 1.000
+positive sequence coverage: 0.263
+negative sequence coverage: 0.263
+adv. examples: 3
+adv. rate: 0.022
+average perturbation: 0.118
+minimum perturbation: 0.047
+
+time:93.59571099281311
+samples: 140
+neuron coverage: 1.000
+cell coverage: 0.560
+gate coverage: 1.000
+positive sequence coverage: 0.263
+negative sequence coverage: 0.263
+adv. examples: 3
+adv. rate: 0.021
+average perturbation: 0.118
+minimum perturbation: 0.047
+
+time:94.20699310302734
+samples: 141
+neuron coverage: 1.000
+cell coverage: 0.560
+gate coverage: 1.000
+positive sequence coverage: 0.263
+negative sequence coverage: 0.263
+adv. examples: 3
+adv. rate: 0.021
+average perturbation: 0.118
+minimum perturbation: 0.047
+
+time:94.81526708602905
+samples: 142
+neuron coverage: 1.000
+cell coverage: 0.560
+gate coverage: 1.000
+positive sequence coverage: 0.267
+negative sequence coverage: 0.267
+adv. examples: 3
+adv. rate: 0.021
+average perturbation: 0.118
+minimum perturbation: 0.047
+
+time:95.42449593544006
+samples: 143
+neuron coverage: 1.000
+cell coverage: 0.560
+gate coverage: 1.000
+positive sequence coverage: 0.267
+negative sequence coverage: 0.267
+adv. examples: 3
+adv. rate: 0.021
+average perturbation: 0.118
+minimum perturbation: 0.047
+
+time:96.02911591529846
+samples: 144
+neuron coverage: 1.000
+cell coverage: 0.560
+gate coverage: 1.000
+positive sequence coverage: 0.267
+negative sequence coverage: 0.267
+adv. examples: 3
+adv. rate: 0.021
+average perturbation: 0.118
+minimum perturbation: 0.047
+
+time:96.6393780708313
+samples: 145
+neuron coverage: 1.000
+cell coverage: 0.560
+gate coverage: 1.000
+positive sequence coverage: 0.267
+negative sequence coverage: 0.267
+adv. examples: 3
+adv. rate: 0.021
+average perturbation: 0.118
+minimum perturbation: 0.047
+
+time:97.25122213363647
+samples: 146
+neuron coverage: 1.000
+cell coverage: 0.562
+gate coverage: 1.000
+positive sequence coverage: 0.267
+negative sequence coverage: 0.267
+adv. examples: 3
+adv. rate: 0.021
+average perturbation: 0.118
+minimum perturbation: 0.047
+
+time:97.85941505432129
+samples: 147
+neuron coverage: 1.000
+cell coverage: 0.562
+gate coverage: 1.000
+positive sequence coverage: 0.272
+negative sequence coverage: 0.272
+adv. examples: 3
+adv. rate: 0.020
+average perturbation: 0.118
+minimum perturbation: 0.047
+
+time:98.47163605690002
+samples: 148
+neuron coverage: 1.000
+cell coverage: 0.564
+gate coverage: 1.000
+positive sequence coverage: 0.272
+negative sequence coverage: 0.272
+adv. examples: 3
+adv. rate: 0.020
+average perturbation: 0.118
+minimum perturbation: 0.047
+
+time:99.08282709121704
+samples: 149
+neuron coverage: 1.000
+cell coverage: 0.564
+gate coverage: 1.000
+positive sequence coverage: 0.276
+negative sequence coverage: 0.276
+adv. examples: 3
+adv. rate: 0.020
+average perturbation: 0.118
+minimum perturbation: 0.047
+
+time:99.68829917907715
+samples: 150
+neuron coverage: 1.000
+cell coverage: 0.564
+gate coverage: 1.000
+positive sequence coverage: 0.276
+negative sequence coverage: 0.276
+adv. examples: 3
+adv. rate: 0.020
+average perturbation: 0.118
+minimum perturbation: 0.047
+
+time:100.2988760471344
+samples: 151
+neuron coverage: 1.000
+cell coverage: 0.564
+gate coverage: 1.000
+positive sequence coverage: 0.276
+negative sequence coverage: 0.276
+adv. examples: 3
+adv. rate: 0.020
+average perturbation: 0.118
+minimum perturbation: 0.047
+
+time:100.93165922164917
+samples: 152
+neuron coverage: 1.000
+cell coverage: 0.564
+gate coverage: 1.000
+positive sequence coverage: 0.276
+negative sequence coverage: 0.276
+adv. examples: 3
+adv. rate: 0.020
+average perturbation: 0.118
+minimum perturbation: 0.047
+
+time:101.54840612411499
+samples: 153
+neuron coverage: 1.000
+cell coverage: 0.568
+gate coverage: 1.000
+positive sequence coverage: 0.280
+negative sequence coverage: 0.280
+adv. examples: 3
+adv. rate: 0.020
+average perturbation: 0.118
+minimum perturbation: 0.047
+
+time:102.16335225105286
+samples: 154
+neuron coverage: 1.000
+cell coverage: 0.570
+gate coverage: 1.000
+positive sequence coverage: 0.280
+negative sequence coverage: 0.280
+adv. examples: 3
+adv. rate: 0.019
+average perturbation: 0.118
+minimum perturbation: 0.047
+
+time:102.7764949798584
+samples: 155
+neuron coverage: 1.000
+cell coverage: 0.572
+gate coverage: 1.000
+positive sequence coverage: 0.280
+negative sequence coverage: 0.280
+adv. examples: 3
+adv. rate: 0.019
+average perturbation: 0.118
+minimum perturbation: 0.047
+
+time:103.38796806335449
+samples: 156
+neuron coverage: 1.000
+cell coverage: 0.572
+gate coverage: 1.000
+positive sequence coverage: 0.280
+negative sequence coverage: 0.280
+adv. examples: 3
+adv. rate: 0.019
+average perturbation: 0.118
+minimum perturbation: 0.047
+
+time:103.99943614006042
+samples: 157
+neuron coverage: 1.000
+cell coverage: 0.572
+gate coverage: 1.000
+positive sequence coverage: 0.284
+negative sequence coverage: 0.284
+adv. examples: 3
+adv. rate: 0.019
+average perturbation: 0.118
+minimum perturbation: 0.047
+
+time:104.60447120666504
+samples: 158
+neuron coverage: 1.000
+cell coverage: 0.574
+gate coverage: 1.000
+positive sequence coverage: 0.284
+negative sequence coverage: 0.284
+adv. examples: 3
+adv. rate: 0.019
+average perturbation: 0.118
+minimum perturbation: 0.047
+
+time:105.21225309371948
+samples: 159
+neuron coverage: 1.000
+cell coverage: 0.576
+gate coverage: 1.000
+positive sequence coverage: 0.288
+negative sequence coverage: 0.288
+adv. examples: 3
+adv. rate: 0.019
+average perturbation: 0.118
+minimum perturbation: 0.047
+
+time:105.82248306274414
+samples: 160
+neuron coverage: 1.000
+cell coverage: 0.576
+gate coverage: 1.000
+positive sequence coverage: 0.288
+negative sequence coverage: 0.288
+adv. examples: 3
+adv. rate: 0.019
+average perturbation: 0.118
+minimum perturbation: 0.047
+
+time:106.46105003356934
+samples: 161
+neuron coverage: 1.000
+cell coverage: 0.582
+gate coverage: 1.000
+positive sequence coverage: 0.288
+negative sequence coverage: 0.288
+adv. examples: 3
+adv. rate: 0.019
+average perturbation: 0.118
+minimum perturbation: 0.047
+
+time:107.09901022911072
+samples: 162
+neuron coverage: 1.000
+cell coverage: 0.584
+gate coverage: 1.000
+positive sequence coverage: 0.288
+negative sequence coverage: 0.288
+adv. examples: 3
+adv. rate: 0.019
+average perturbation: 0.118
+minimum perturbation: 0.047
+
+time:107.71644711494446
+samples: 163
+neuron coverage: 1.000
+cell coverage: 0.586
+gate coverage: 1.000
+positive sequence coverage: 0.292
+negative sequence coverage: 0.292
+adv. examples: 3
+adv. rate: 0.018
+average perturbation: 0.118
+minimum perturbation: 0.047
+
+time:108.3366551399231
+samples: 164
+neuron coverage: 1.000
+cell coverage: 0.590
+gate coverage: 1.000
+positive sequence coverage: 0.292
+negative sequence coverage: 0.292
+adv. examples: 3
+adv. rate: 0.018
+average perturbation: 0.118
+minimum perturbation: 0.047
+
+time:108.94570517539978
+samples: 165
+neuron coverage: 1.000
+cell coverage: 0.590
+gate coverage: 1.000
+positive sequence coverage: 0.296
+negative sequence coverage: 0.296
+adv. examples: 3
+adv. rate: 0.018
+average perturbation: 0.118
+minimum perturbation: 0.047
+
+time:109.55546188354492
+samples: 166
+neuron coverage: 1.000
+cell coverage: 0.592
+gate coverage: 1.000
+positive sequence coverage: 0.300
+negative sequence coverage: 0.296
+adv. examples: 3
+adv. rate: 0.018
+average perturbation: 0.118
+minimum perturbation: 0.047
+
+time:110.16778707504272
+samples: 167
+neuron coverage: 1.000
+cell coverage: 0.592
+gate coverage: 1.000
+positive sequence coverage: 0.300
+negative sequence coverage: 0.296
+adv. examples: 3
+adv. rate: 0.018
+average perturbation: 0.118
+minimum perturbation: 0.047
+
+time:110.7861430644989
+samples: 168
+neuron coverage: 1.000
+cell coverage: 0.592
+gate coverage: 1.000
+positive sequence coverage: 0.305
+negative sequence coverage: 0.300
+adv. examples: 3
+adv. rate: 0.018
+average perturbation: 0.118
+minimum perturbation: 0.047
+
+time:111.40560793876648
+samples: 169
+neuron coverage: 1.000
+cell coverage: 0.594
+gate coverage: 1.000
+positive sequence coverage: 0.309
+negative sequence coverage: 0.300
+adv. examples: 3
+adv. rate: 0.018
+average perturbation: 0.118
+minimum perturbation: 0.047
+
+time:112.02320909500122
+samples: 170
+neuron coverage: 1.000
+cell coverage: 0.596
+gate coverage: 1.000
+positive sequence coverage: 0.309
+negative sequence coverage: 0.300
+adv. examples: 3
+adv. rate: 0.018
+average perturbation: 0.118
+minimum perturbation: 0.047
+
+time:112.63852119445801
+samples: 171
+neuron coverage: 1.000
+cell coverage: 0.596
+gate coverage: 1.000
+positive sequence coverage: 0.309
+negative sequence coverage: 0.300
+adv. examples: 3
+adv. rate: 0.018
+average perturbation: 0.118
+minimum perturbation: 0.047
+
+time:113.24968099594116
+samples: 172
+neuron coverage: 1.000
+cell coverage: 0.596
+gate coverage: 1.000
+positive sequence coverage: 0.309
+negative sequence coverage: 0.300
+adv. examples: 3
+adv. rate: 0.017
+average perturbation: 0.118
+minimum perturbation: 0.047
+
+time:113.86184930801392
+samples: 173
+neuron coverage: 1.000
+cell coverage: 0.600
+gate coverage: 1.000
+positive sequence coverage: 0.313
+negative sequence coverage: 0.300
+adv. examples: 3
+adv. rate: 0.017
+average perturbation: 0.118
+minimum perturbation: 0.047
+
+time:114.48831796646118
+samples: 174
+neuron coverage: 1.000
+cell coverage: 0.602
+gate coverage: 1.000
+positive sequence coverage: 0.317
+negative sequence coverage: 0.300
+adv. examples: 3
+adv. rate: 0.017
+average perturbation: 0.118
+minimum perturbation: 0.047
+
+time:115.10336899757385
+samples: 175
+neuron coverage: 1.000
+cell coverage: 0.606
+gate coverage: 1.000
+positive sequence coverage: 0.317
+negative sequence coverage: 0.300
+adv. examples: 3
+adv. rate: 0.017
+average perturbation: 0.118
+minimum perturbation: 0.047
+
+time:115.72987127304077
+samples: 176
+neuron coverage: 1.000
+cell coverage: 0.606
+gate coverage: 1.000
+positive sequence coverage: 0.317
+negative sequence coverage: 0.300
+adv. examples: 3
+adv. rate: 0.017
+average perturbation: 0.118
+minimum perturbation: 0.047
+
+time:116.34084630012512
+samples: 177
+neuron coverage: 1.000
+cell coverage: 0.606
+gate coverage: 1.000
+positive sequence coverage: 0.321
+negative sequence coverage: 0.305
+adv. examples: 3
+adv. rate: 0.017
+average perturbation: 0.118
+minimum perturbation: 0.047
+
+time:116.95272397994995
+samples: 178
+neuron coverage: 1.000
+cell coverage: 0.606
+gate coverage: 1.000
+positive sequence coverage: 0.325
+negative sequence coverage: 0.309
+adv. examples: 3
+adv. rate: 0.017
+average perturbation: 0.118
+minimum perturbation: 0.047
+
+time:117.56026816368103
+samples: 179
+neuron coverage: 1.000
+cell coverage: 0.608
+gate coverage: 1.000
+positive sequence coverage: 0.325
+negative sequence coverage: 0.309
+adv. examples: 3
+adv. rate: 0.017
+average perturbation: 0.118
+minimum perturbation: 0.047
+
+time:118.16975402832031
+samples: 180
+neuron coverage: 1.000
+cell coverage: 0.608
+gate coverage: 1.000
+positive sequence coverage: 0.329
+negative sequence coverage: 0.313
+adv. examples: 3
+adv. rate: 0.017
+average perturbation: 0.118
+minimum perturbation: 0.047
+
+time:118.80457210540771
+samples: 181
+neuron coverage: 1.000
+cell coverage: 0.608
+gate coverage: 1.000
+positive sequence coverage: 0.329
+negative sequence coverage: 0.313
+adv. examples: 3
+adv. rate: 0.017
+average perturbation: 0.118
+minimum perturbation: 0.047
+
+time:119.42066812515259
+samples: 182
+neuron coverage: 1.000
+cell coverage: 0.610
+gate coverage: 1.000
+positive sequence coverage: 0.329
+negative sequence coverage: 0.313
+adv. examples: 3
+adv. rate: 0.016
+average perturbation: 0.118
+minimum perturbation: 0.047
+
+time:120.04622220993042
+samples: 183
+neuron coverage: 1.000
+cell coverage: 0.610
+gate coverage: 1.000
+positive sequence coverage: 0.333
+negative sequence coverage: 0.317
+adv. examples: 3
+adv. rate: 0.016
+average perturbation: 0.118
+minimum perturbation: 0.047
+
+time:120.66518831253052
+samples: 184
+neuron coverage: 1.000
+cell coverage: 0.610
+gate coverage: 1.000
+positive sequence coverage: 0.337
+negative sequence coverage: 0.321
+adv. examples: 3
+adv. rate: 0.016
+average perturbation: 0.118
+minimum perturbation: 0.047
+
+time:121.29094004631042
+samples: 185
+neuron coverage: 1.000
+cell coverage: 0.610
+gate coverage: 1.000
+positive sequence coverage: 0.342
+negative sequence coverage: 0.325
+adv. examples: 3
+adv. rate: 0.016
+average perturbation: 0.118
+minimum perturbation: 0.047
+
+time:121.9117751121521
+samples: 186
+neuron coverage: 1.000
+cell coverage: 0.610
+gate coverage: 1.000
+positive sequence coverage: 0.342
+negative sequence coverage: 0.325
+adv. examples: 3
+adv. rate: 0.016
+average perturbation: 0.118
+minimum perturbation: 0.047
+
+time:122.53203701972961
+samples: 187
+neuron coverage: 1.000
+cell coverage: 0.612
+gate coverage: 1.000
+positive sequence coverage: 0.346
+negative sequence coverage: 0.329
+adv. examples: 3
+adv. rate: 0.016
+average perturbation: 0.118
+minimum perturbation: 0.047
+
+time:123.15992212295532
+samples: 188
+neuron coverage: 1.000
+cell coverage: 0.612
+gate coverage: 1.000
+positive sequence coverage: 0.350
+negative sequence coverage: 0.333
+adv. examples: 3
+adv. rate: 0.016
+average perturbation: 0.118
+minimum perturbation: 0.047
+
+time:123.81294703483582
+samples: 189
+neuron coverage: 1.000
+cell coverage: 0.620
+gate coverage: 1.000
+positive sequence coverage: 0.350
+negative sequence coverage: 0.333
+adv. examples: 4
+adv. rate: 0.021
+average perturbation: 0.121
+minimum perturbation: 0.047
+
+time:124.51054406166077
+samples: 190
+neuron coverage: 1.000
+cell coverage: 0.624
+gate coverage: 1.000
+positive sequence coverage: 0.354
+negative sequence coverage: 0.333
+adv. examples: 4
+adv. rate: 0.021
+average perturbation: 0.121
+minimum perturbation: 0.047
+
+time:125.16337895393372
+samples: 191
+neuron coverage: 1.000
+cell coverage: 0.626
+gate coverage: 1.000
+positive sequence coverage: 0.354
+negative sequence coverage: 0.333
+adv. examples: 4
+adv. rate: 0.021
+average perturbation: 0.121
+minimum perturbation: 0.047
+
+time:125.7934422492981
+samples: 192
+neuron coverage: 1.000
+cell coverage: 0.628
+gate coverage: 1.000
+positive sequence coverage: 0.358
+negative sequence coverage: 0.337
+adv. examples: 4
+adv. rate: 0.021
+average perturbation: 0.121
+minimum perturbation: 0.047
+
+time:126.45012211799622
+samples: 193
+neuron coverage: 1.000
+cell coverage: 0.632
+gate coverage: 1.000
+positive sequence coverage: 0.358
+negative sequence coverage: 0.337
+adv. examples: 5
+adv. rate: 0.026
+average perturbation: 0.123
+minimum perturbation: 0.047
+
+time:127.10522818565369
+samples: 194
+neuron coverage: 1.000
+cell coverage: 0.638
+gate coverage: 1.000
+positive sequence coverage: 0.358
+negative sequence coverage: 0.337
+adv. examples: 5
+adv. rate: 0.026
+average perturbation: 0.123
+minimum perturbation: 0.047
+
+time:127.74524402618408
+samples: 195
+neuron coverage: 1.000
+cell coverage: 0.638
+gate coverage: 1.000
+positive sequence coverage: 0.358
+negative sequence coverage: 0.337
+adv. examples: 5
+adv. rate: 0.026
+average perturbation: 0.123
+minimum perturbation: 0.047
+
+time:128.38135313987732
+samples: 196
+neuron coverage: 1.000
+cell coverage: 0.638
+gate coverage: 1.000
+positive sequence coverage: 0.358
+negative sequence coverage: 0.337
+adv. examples: 5
+adv. rate: 0.026
+average perturbation: 0.123
+minimum perturbation: 0.047
+
+time:129.01131296157837
+samples: 197
+neuron coverage: 1.000
+cell coverage: 0.638
+gate coverage: 1.000
+positive sequence coverage: 0.362
+negative sequence coverage: 0.342
+adv. examples: 5
+adv. rate: 0.025
+average perturbation: 0.123
+minimum perturbation: 0.047
+
+time:129.6640751361847
+samples: 198
+neuron coverage: 1.000
+cell coverage: 0.638
+gate coverage: 1.000
+positive sequence coverage: 0.362
+negative sequence coverage: 0.346
+adv. examples: 5
+adv. rate: 0.025
+average perturbation: 0.123
+minimum perturbation: 0.047
+
+time:130.3005509376526
+samples: 199
+neuron coverage: 1.000
+cell coverage: 0.638
+gate coverage: 1.000
+positive sequence coverage: 0.362
+negative sequence coverage: 0.346
+adv. examples: 5
+adv. rate: 0.025
+average perturbation: 0.123
+minimum perturbation: 0.047
+
+time:130.94959020614624
+samples: 200
+neuron coverage: 1.000
+cell coverage: 0.638
+gate coverage: 1.000
+positive sequence coverage: 0.366
+negative sequence coverage: 0.350
+adv. examples: 5
+adv. rate: 0.025
+average perturbation: 0.123
+minimum perturbation: 0.047
+
