@@ -6,13 +6,14 @@ sys.path.append('src')
 from utils import mkdir
 from sentimentTestSuite import sentimentTrainModel, sentimentGenerateTestSuite
 from mnistTestSuite import mnist_lstm_train, mnist_lstm_test
+from lipoTestSuite import lipo_lstm_train, lipo_lstm_test
 from record import record
 
 
 def main():
     
     parser = argparse.ArgumentParser(description='testing for recurrent neural networks')
-    parser.add_argument('--model', dest='modelName', default='sentiment', help='')
+    parser.add_argument('--model', dest='modelName', default='lipo', help='')
     parser.add_argument('--TestCaseNum', dest='TestCaseNum', default='200', help='')
     parser.add_argument('--threshold_CC', dest='threshold_CC', default='6', help='')
     parser.add_argument('--threshold_MC', dest='threshold_MC', default='0.7', help='')
@@ -46,9 +47,15 @@ def main():
             mnist_lstm_train()
         else:
             mnist_lstm_test(r,threshold_CC,threshold_MC,symbols_SQ,TestCaseNum)
+
+    elif modelName == 'lipo':
+        if mode == 'train':
+            lipo_lstm_train()
+        else:
+            lipo_lstm_test(r,threshold_CC,threshold_MC,symbols_SQ,TestCaseNum)
         
     else: 
-        print("Please specify a model from {sentiment, mnist}")
+        print("Please specify a model from {sentiment, mnist, lipo}")
     
     r.close()
 
