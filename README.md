@@ -33,4 +33,6 @@ For example:
 
 > python main.py --model mnist --TestCaseNum 2000 --TargMetri CC --CoverageStop 0.9 --threshold_CC 6 --threshold_GC 0.8 --symbols_SQ 2 --minimalTest 0 --output log_folder/record.txt
 
+Both the number of test cases is over 2000 or target metrics, Cell Coverage, reach up to 0.9 coverage rate will induce the termination of the program.
+
 readfile.py can read the log file log_folder\record.txt and generate .MAT file containg coverage updating information which can be further plotted on Matlab.
