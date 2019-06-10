@@ -9,7 +9,7 @@ Chemistry)
 
 Command to run: 
 
-> python main.py --model \<modelName> --TestCaseNum \<Num. of Test Cases> --TargMetri \<Terminate Metrics> --CoverageStop \<Terminate Coverage Rate> --threshold_CC \<CC threshold> --threshold_MC \<MC threshold> --symbols_SQ \<Num. of symbols> --mode \<modeName> --minimalTest \<if generate minimal test set> -- output \<output file path>
+> python main.py --model \<modelName> --TestCaseNum \<Num. of Test Cases> --TargMetri \<Terminate Metrics> --CoverageStop \<Terminate Coverage Rate> --threshold_CC \<CC threshold> --threshold_GC \<GC threshold> --symbols_SQ \<Num. of symbols> --mode \<modeName> --minimalTest \<if generate minimal test set> -- output \<output file path>
 
 where 
 
@@ -17,9 +17,9 @@ where
 
 \<Num. of Test Cases> is expected number of test cases
 
-\<Terminate Metrics> can be in {CC,GC,SQN,SQP}
+\<Termination Metrics> can be in {CC,GC,SQN,SQP}
 
-\<Terminate Coverage Rate> is the expected coverage rate of Terminate Metrics
+\<Termination Coverage Rate> is expected coverage rate of Termination Metrics
   
 \<CC threshold> can be in [3,9]  
 
@@ -27,8 +27,8 @@ where
 
 \<Num. of symbols> can be in {2,3}
 
-\<if generate minimal test set> can be in {0: No, 1: Yes}
+\<Generate minimal test set> can be in {0: No, 1: Yes}
 
 For example: 
 
-> python main.py --model mnist --TestCaseNum 2000 --TargMetri CC --CoverageStop 0.9 --threshold_CC 6 --threshold_MC 0.8 --symbols_SQ 2 --minimalTest 0 --output log_folder/record.txt
+> python main.py --model mnist --TestCaseNum 2000 --TargMetri CC --CoverageStop 0.9 --threshold_CC 6 --threshold_GC 0.8 --symbols_SQ 2 --minimalTest 0 --output log_folder/record.txt
