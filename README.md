@@ -19,7 +19,7 @@ where
 
 \<Termination Metrics> can be in {CC,GC,SQN,SQP}
 
-\<Termination Coverage Rate> is expected coverage rate of Termination Metrics
+\<Termination Coverage Rate> is expected coverage rate of Termination Metric
   
 \<CC threshold> can be in [3,9]  
 
@@ -32,3 +32,5 @@ where
 For example: 
 
 > python main.py --model mnist --TestCaseNum 2000 --TargMetri CC --CoverageStop 0.9 --threshold_CC 6 --threshold_GC 0.8 --symbols_SQ 2 --minimalTest 0 --output log_folder/record.txt
+
+readfile.py can read the log file log_folder\record.txt and generate .MAT file containg coverage updating information which can be further plotted on Matlab.
