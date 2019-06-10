@@ -19,7 +19,7 @@ where
 
 \<Terminate Metrics> can be in {CC,GC,SQN,SQP}
 
-<Terminate Coverage Rate> is the expected coverage rate of Terminate Metrics
+\<Terminate Coverage Rate> is the expected coverage rate of Terminate Metrics
   
 \<CC threshold> can be in [3,9]  
 
