@@ -44,6 +44,6 @@ For example, we can run the following
 which says that, both the number of test cases is over 2000 or target metrics, Cell Coverage, reach up to 0.9 coverage rate will induce the termination of the program.
 
 #### run result analysis procedure
-readfile.py can read the log file log_folder\record.txt and generate .MAT file containg coverage updating information which can be further plotted on Matlab.
+readfile.py can read the log file log_folder\record.txt and generate .MAT file containg coverage updating information which can be further plotted with Matlab.
 
-    python main.py
+    python readfile.py
