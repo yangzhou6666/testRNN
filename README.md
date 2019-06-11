@@ -1,5 +1,7 @@
 # Coverage-Guided Testing of Long Short-Term Memory (LSTM) Networks: 
 
+![Alt text](relative/path/to/img.jpg?raw=true "Title")
+
 #### Four Test metrics are used: 
 1. Neuron Coverage (NC), 
 2. Cell Coverage (CC), 
