@@ -15,11 +15,11 @@
 
 1. rdkit (https://www.rdkit.org/docs/Install.html), by running the following command: 
 
-        conda install -c conda-forge rdkit
+       conda install -c conda-forge rdkit
       
       
 
-## Command to run: 
+## Command to Run: 
 
 We have two commands to run testing procedure and to run result analysis procedure, respectively. 
 
@@ -45,3 +45,5 @@ which says that, both the number of test cases is over 2000 or target metrics, C
 
 #### run result analysis procedure
 readfile.py can read the log file log_folder\record.txt and generate .MAT file containg coverage updating information which can be further plotted on Matlab.
+
+    python main.py
