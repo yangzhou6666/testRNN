@@ -29,7 +29,7 @@ Note: with the above commands, we create a new virtual environment dedicated for
       
 2. Other packages including 
 
-       conda install -c menpo opencv keras nltk 
+       conda install -c menpo opencv keras nltk matplotlib
       
        pip install saxpy sklearn
 
