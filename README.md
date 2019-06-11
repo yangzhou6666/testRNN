@@ -1,4 +1,4 @@
-# Testing Recurrent Neural Networks: 
+# Coverage-Guided Testing of Recurrent Neural Networks: 
 
 #### Four Test metrics are used: 
 1. Neuron Coverage (NC), 
