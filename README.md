@@ -1,18 +1,21 @@
 
 
-Testing Recurrent Neural Networks: 
+#Testing Recurrent Neural Networks: 
 
-Four Test metrics are used: Neuron Coverage (NC), Cell Coverage (CC), Gate Coverage (GC), Sequence Coverage (SQ)
+##Four Test metrics are used: Neuron Coverage (NC), Cell Coverage (CC), Gate Coverage (GC), Sequence Coverage (SQ)
 
-Three models trained by LSTM: Sentiment Analysis, Mnist Handwritten Digits, Lipophilicity Prediction (Physical
+##Three models trained by LSTM: Sentiment Analysis, Mnist Handwritten Digits, Lipophilicity Prediction (Physical
 Chemistry)
 
 Dependencies: 
 
-1. rdkit
-      conda install -c conda-forge rdkit
+1. rdkit (https://www.rdkit.org/docs/Install.html), by running the following command: 
 
-Command to run: 
+      conda install -c conda-forge rdkit
+      
+      
+
+##Command to run: 
 
 > python main.py --model \<modelName> --TestCaseNum \<Num. of Test Cases> --TargMetri \<Terminate Metrics> --CoverageStop \<Terminate Coverage Rate> --threshold_CC \<CC threshold> --threshold_GC \<GC threshold> --symbols_SQ \<Num. of symbols> --mode \<modeName> --minimalTest \<if generate minimal test set> -- output \<output file path>
 
