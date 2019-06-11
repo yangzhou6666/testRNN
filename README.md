@@ -72,3 +72,6 @@ which says that, we are working with MNIST model, and the test case generation w
 readfile.py can read the log file log_folder\record.txt and .MAT file of test conditions counting. Several figures includes the coverage updating information for all metrics and test conditions statistics plot are generated. 
 
     python readfile.py --output log_folder/record.txt --metrcis all
+    
+## Reference 
+
