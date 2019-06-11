@@ -17,11 +17,6 @@
 
        conda install -c conda-forge rdkit
       
-2. Other packages including 
-
-      conda install -c menpo opencv keras nltk 
-      
-      pip install saxpy
       
 
 ## Command to Run: 
@@ -60,6 +55,6 @@ For example, we can run the following
 which says that, we are working with MNIST model, and the test case generation will terminate when either the number of test cases is over 2000 or the target metric, Cell Coverage, reaches 0.9 coverage rate. We need to specify other parameters including threshold_CC, threshold_GC, symbols_SQ. Moreover, we do not ask for the generation of miminal test suite, and the log is generated to the file log_folder/record.txt. 
 
 #### to run result analysis procedure
-readfile.py can read the log file log_folder\record.txt and generate .MAT file containg coverage updating information which can be further plotted with Matlab.
+readfile.py can read the log file log_folder\record.txt and .MAT file of test conditions counting. Several figures includes the coverage updating information for all metrics and test conditions statistics plot are generated. 
 
-    python readfile.py
+    python readfile.py --output log_folder/record.txt --metrcis all
