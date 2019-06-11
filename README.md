@@ -1,7 +1,9 @@
 # Coverage-Guided Testing of Long Short-Term Memory (LSTM) Networks: 
 
-<img src="img/mnist_sm_adv.png" data-canonical-src="img/mnist_sm_adv.png" width="200" height="400" />
-
+<center>
+<img src="img/mnist_sm_adv.png" data-canonical-src="img/mnist_sm_adv.png" width="600" height="600" />
+</center>
+       
 #### Four Test metrics are used: 
 1. Neuron Coverage (NC), 
 2. Cell Coverage (CC), 
