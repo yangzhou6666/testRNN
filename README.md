@@ -25,11 +25,16 @@ We have two commands to run testing procedure and to run result analysis procedu
 
 #### to run testing procedure
 
-    python main.py --model <modelName> --TestCaseNum <Num. of Test Cases> 
-    --TargMetri <Terminate Metrics> --CoverageStop <Terminate Coverage Rate> 
-    --threshold_CC <CC threshold> --threshold_GC <GC threshold> 
-    --symbols_SQ <Num. of symbols> --mode <modeName> 
-    --minimalTest <if generate minimal test set> -- output <output file path>
+    python main.py --model <modelName> 
+                   --TestCaseNum <Num. of Test Cases> 
+                   --TargMetri <Terminate Metrics> 
+                   --CoverageStop <Terminate Coverage Rate> 
+                   --threshold_CC <CC threshold> 
+                   --threshold_GC <GC threshold> 
+                   --symbols_SQ <Num. of symbols> 
+                   --mode <modeName> 
+                   --minimalTest <if generate minimal test set> 
+                   -- output <output file path>
 
 where 
 1. \<modelName> can be in {sentiment,mnist,lipo}
