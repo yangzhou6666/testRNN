@@ -1,7 +1,7 @@
 # Coverage-Guided Testing of Long Short-Term Memory (LSTM) Networks: 
 
 <center>
-<img src="img/mnist_sm_adv.png" data-canonical-src="img/mnist_sm_adv.png" width="600" height="600" />
+<img src="img/mnist_sm_adv.png" data-canonical-src="img/mnist_sm_adv.png" width="800" height="600" />
 </center>
        
 #### Four Test metrics are used: 
