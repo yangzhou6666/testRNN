@@ -32,7 +32,7 @@ def sentimentGenerateTestSuite(r,threshold_CC,threshold_MC,symbols_SQ,TestCaseNu
     sm.load_model()
     # test layer
     layer = 1
-
+    termin = 0
     # minimal test dataset generation
     if minimalTest != '0':
         ncdata = []
@@ -139,8 +139,7 @@ def sentimentGenerateTestSuite(r,threshold_CC,threshold_MC,symbols_SQ,TestCaseNu
                     termin = sqtoe.coverage_n
                 elif TargMetri == 'SQP':
                     termin = sqtoe.coverage_p
-                else:
-                    termin = 0
+
 
                 # output test cases and adversarial examples
                 if minimalTest == '0':
@@ -207,7 +206,7 @@ def sentimentGenerateTestSuite(r,threshold_CC,threshold_MC,symbols_SQ,TestCaseNu
                 continue
             else:
                 io.savemat('log_folder/feature_count_CC.mat', {'feature_count_CC': cctoe.testObjective.feature_count})
-                io.savemat('log_folder/feature_count_MC.mat', {'feature_count_MC': mctoe.testObjective.feature_count})
+                io.savemat('log_folder/feature_count_GC.mat', {'feature_count_GC': mctoe.testObjective.feature_count})
                 # if minimalTest != '0':
                 #     np.save('minimal_nc/ncdata', ncdata)
                 #     np.save('minimal_cc/ccdata', ccdata)

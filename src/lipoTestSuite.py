@@ -34,6 +34,7 @@ def lipo_lstm_test(r,threshold_CC,threshold_MC,symbols_SQ,TestCaseNum,minimalTes
 
     # test layer
     layer = 1
+    termin = 0
     # predict logD value from smiles representation
     smiles = np.array(['CCC(=O)O[C@@]1(CC[NH+](C[C@H]1CC=C)C)c2ccccc2'])
     test = np.squeeze(lipo.smile_vect(smiles))
@@ -131,8 +132,7 @@ def lipo_lstm_test(r,threshold_CC,threshold_MC,symbols_SQ,TestCaseNum,minimalTes
                     termin = sqtoe.coverage_n
                 elif TargMetri == 'SQP':
                     termin = sqtoe.coverage_p
-                else:
-                    termin = 0
+
 
                 # output test cases and adversarial example
                 if minimalTest == '0':
@@ -183,7 +183,7 @@ def lipo_lstm_test(r,threshold_CC,threshold_MC,symbols_SQ,TestCaseNum,minimalTes
                 continue
             else:
                 io.savemat('log_folder/feature_count_CC.mat', {'feature_count_CC': cctoe.testObjective.feature_count})
-                io.savemat('log_folder/feature_count_MC.mat', {'feature_count_MC': mctoe.testObjective.feature_count})
+                io.savemat('log_folder/feature_count_GC.mat', {'feature_count_GC': mctoe.testObjective.feature_count})
                 # if minimalTest != '0':
                 #     np.save('minimal_nc/ncdata', ncdata)
                 #     np.save('minimal_cc/ccdata', ccdata)

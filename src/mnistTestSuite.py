@@ -16,7 +16,7 @@ def mnist_lstm_train():
 def mnist_lstm_test(r,threshold_CC,threshold_MC,symbols_SQ,TestCaseNum,minimalTest,TargMetri,CoverageStop):
     r.resetTime()
     # epsilon value range (a, b]
-    random.seed(1)
+    random.seed(3)
     a = 0.05
     b = 0.1
     step_bound = 5
@@ -27,7 +27,7 @@ def mnist_lstm_test(r,threshold_CC,threshold_MC,symbols_SQ,TestCaseNum,minimalTe
     mn.load_model()
     # test layer
     layer = 1
-
+    termin = 0
     # test case
     test = mn.X_test[15]
     h_t, c_t, f_t = mn.cal_hidden_state(test, layer)
@@ -91,7 +91,7 @@ def mnist_lstm_test(r,threshold_CC,threshold_MC,symbols_SQ,TestCaseNum,minimalTe
     sqtoe.testObjective.feature_n = list(iter.product(symb, repeat=5))
     sqtoe.testObjective.setOriginalNumOfFeature()
 
-        # get gradient function for the mnist
+    # get gradient function for the mnist
     f, nodes_names = get_gradients_function(mn.model, mn.layerName(0))
 
     for test in X_train:
@@ -122,7 +122,6 @@ def mnist_lstm_test(r,threshold_CC,threshold_MC,symbols_SQ,TestCaseNum,minimalTe
                 sqtoe.update_features(indices)
                 # write information to file
                 writeInfo(r,mn.numSamples,mn.numAdv,mn.perturbations,nctoe.coverage,cctoe.coverage,mctoe.coverage,sqtoe.coverage_p,sqtoe.coverage_n)
-                # output test cases and adversarial example
                 # terminate condition
                 if TargMetri == 'CC':
                     termin = cctoe.coverage
@@ -132,9 +131,8 @@ def mnist_lstm_test(r,threshold_CC,threshold_MC,symbols_SQ,TestCaseNum,minimalTe
                     termin = sqtoe.coverage_n
                 elif TargMetri == 'SQP':
                     termin = sqtoe.coverage_p
-                else:
-                    termin = 0
 
+                # output test cases and adversarial example
                 if minimalTest == '0' :
                     img = test2.reshape((28, 28, 1))
                     pred_img = image.array_to_img(img)
@@ -166,7 +164,7 @@ def mnist_lstm_test(r,threshold_CC,threshold_MC,symbols_SQ,TestCaseNum,minimalTe
                 continue
             else:
                 io.savemat('log_folder/feature_count_CC.mat', {'feature_count_CC': cctoe.testObjective.feature_count})
-                io.savemat('log_folder/feature_count_MC.mat', {'feature_count_MC': mctoe.testObjective.feature_count})
+                io.savemat('log_folder/feature_count_GC.mat', {'feature_count_GC': mctoe.testObjective.feature_count})
                 # if minimalTest != '0':
                 #     np.save('minimal_nc/ncdata', ncdata)
                 #     np.save('minimal_cc/ccdata', ccdata)

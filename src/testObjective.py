@@ -268,7 +268,7 @@ class MCTestObjectiveEvaluation:
         self.minimal = 0
         activation = self.get_activations()
         features = (np.argwhere(activation > self.threshold)).tolist()
-        print("found %s features for MC" % (len(features)))
+        print("found %s features for GC" % (len(features)))
         # print("including %s."%(str(features)))
         for feature in features:
             if feature in self.testObjective.feature:
@@ -305,7 +305,7 @@ class MCTestObjective:
         self.feature_count = np.zeros(( len(self.feature)))
 
     def displayRemainingFeatures(self):
-        print("%s features to be covered for MC" % (self.originalNumOfFeature))
+        print("%s features to be covered for GC" % (self.originalNumOfFeature))
         # print("including %s."%(str(self.feature)))
 
     def setLayer(self, layer):
