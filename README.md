@@ -52,9 +52,9 @@ For example, we can run the following
 
     python main.py --model mnist --TestCaseNum 2000 --TargMetri CC --CoverageStop 0.9 --threshold_CC 6 --threshold_GC 0.8 --symbols_SQ 2 --minimalTest 0 --output log_folder/record.txt
 
-which says that, both the number of test cases is over 2000 or target metrics, Cell Coverage, reach up to 0.9 coverage rate will induce the termination of the program.
+which says that, we are working with MNIST model, and the test case generation will terminate when either the number of test cases is over 2000 or the target metric, Cell Coverage, reaches 0.9 coverage rate. We need to specify other parameters including threshold_CC, threshold_GC, symbols_SQ. Moreover, we do not ask for the generation of miminal test suite, and the log is generated to the file log_folder/record.txt. 
 
-#### run result analysis procedure
+#### to run result analysis procedure
 readfile.py can read the log file log_folder\record.txt and generate .MAT file containg coverage updating information which can be further plotted with Matlab.
 
     python readfile.py
