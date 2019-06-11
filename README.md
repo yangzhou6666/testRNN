@@ -46,7 +46,7 @@ We have two commands to run testing procedure and to run result analysis procedu
                    --threshold_CC <CC threshold> 
                    --threshold_GC <GC threshold> 
                    --symbols_SQ <Num. of symbols> 
-                   --mode <modeName> 
+                   ［--mode <modeName>］ 
                    --minimalTest <if generate minimal test set> 
                    --output <output file path>
 
