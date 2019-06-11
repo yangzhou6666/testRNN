@@ -34,7 +34,7 @@ We have two commands to run testing procedure and to run result analysis procedu
                    --symbols_SQ <Num. of symbols> 
                    --mode <modeName> 
                    --minimalTest <if generate minimal test set> 
-                   -- output <output file path>
+                   --output <output file path>
 
 where 
 1. \<modelName> can be in {sentiment,mnist,lipo}
@@ -42,9 +42,11 @@ where
 3. \<Termination Metrics> can be in {CC,GC,SQN,SQP}
 4. \<Termination Coverage Rate> is expected coverage rate of Termination Metric
 5. \<CC threshold> can be in [3,9]  
-6. \<MC threshold> can be in [0,1]
+6. \<GC threshold> can be in [0,1]
 7. \<Num. of symbols> can be in {2,3}
-8. \<Generate minimal test set> can be in {0: No, 1: Yes}
+8. \<modeName> can be in {train,test} with default value test 
+9. \<Generate minimal test set> can be in {0: No, 1: Yes}
+10. \<output file path> specifies the path to the output file
 
 For example, we can run the following 
 
