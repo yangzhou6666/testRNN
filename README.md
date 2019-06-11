@@ -17,6 +17,11 @@
 
        conda install -c conda-forge rdkit
       
+2. Other packages including 
+
+      conda install -c menpo opencv keras nltk 
+      
+      pip install saxpy
       
 
 ## Command to Run: 
