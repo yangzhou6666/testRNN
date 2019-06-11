@@ -13,10 +13,10 @@ from record import record
 def main():
     
     parser = argparse.ArgumentParser(description='testing for recurrent neural networks')
-    parser.add_argument('--model', dest='modelName', default='mnist', help='')
+    parser.add_argument('--model', dest='modelName', default='lipo', help='')
     parser.add_argument('--TestCaseNum', dest='TestCaseNum', default='2000', help='')
     parser.add_argument('--TargMetri', dest='TargMetri', default='None', help='')
-    parser.add_argument('--CoverageStop', dest='CoverageStop', default='0.1', help='')
+    parser.add_argument('--CoverageStop', dest='CoverageStop', default='0.9', help='')
     parser.add_argument('--threshold_CC', dest='threshold_CC', default='6', help='')
     parser.add_argument('--threshold_GC', dest='threshold_GC', default='0.78', help='')
     parser.add_argument('--symbols_SQ', dest='symbols_SQ', default='2', help='')
