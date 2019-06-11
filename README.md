@@ -1,6 +1,6 @@
 # Coverage-Guided Testing of Long Short-Term Memory (LSTM) Networks: 
 
-![Alt text](img/mnist_sm_adv.png?raw=true "Adversarial examples for LSTM models trained on MNIST handwritten digits dataset for image classification, an IMDB reviews dataset for sentiment analysis, and a SMILES strings dataset for lipophilicity prediction, respectively.")
+![Alt text](img/mnist_sm_adv.png)
 
 #### Four Test metrics are used: 
 1. Neuron Coverage (NC), 
