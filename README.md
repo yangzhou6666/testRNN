@@ -13,9 +13,13 @@
 
 ## Software Dependencies: 
 
-1. rdkit (https://www.rdkit.org/docs/Install.html), by running the following command: 
+1. rdkit (https://www.rdkit.org/docs/Install.html), by running the following commands: 
 
-       conda install -c conda-forge rdkit
+       conda create -c rdkit -n my-rdkit-env rdkit
+       
+       conda activate my-rdkit-env
+       
+Note: with the above commands, we create a new virtual environment dedicated for rdkit. Below, every time one needs to run the program, he/she needs to activate the my-rdkit-env
       
 2. Other packages including 
 
