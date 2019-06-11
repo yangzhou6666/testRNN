@@ -124,8 +124,8 @@ plt.ylabel('Covering Times')
 plt.title('Cell Coverage Test Conditions Count')
 plt.savefig("log_folder/feature_count_cc.jpg")
 
-data1 = scio.loadmat('./log_folder/feature_count_GC.mat')
-feature_count_GC = data1['feature_count_GC']
+data2 = scio.loadmat('./log_folder/feature_count_GC.mat')
+feature_count_GC = data2['feature_count_GC']
 plt.figure()
 plt.bar(range(len(feature_count_GC[0])),feature_count_GC[0])
 plt.xlabel('Test Conditions')
