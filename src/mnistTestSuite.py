@@ -13,7 +13,7 @@ def mnist_lstm_train():
     mn = mnistclass()
     mn.train_model()
 
-def mnist_lstm_test(r,threshold_CC,threshold_MC,symbols_SQ,TestCaseNum,minimalTest,TargMetri,CoverageStop):
+def mnist_lstm_test(r,threshold_CC,threshold_MC,symbols_SQ,seq,TestCaseNum,minimalTest,TargMetri,CoverageStop):
     r.resetTime()
     # epsilon value range (a, b]
     random.seed(3)
@@ -83,12 +83,14 @@ def mnist_lstm_test(r,threshold_CC,threshold_MC,symbols_SQ,TestCaseNum,minimalTe
     sqtoe.symbols = int(symbols_SQ)
     # generate all the features
     # choose time steps to cover
-    indices = slice(19, 24)
+    t1 = int(seq[0])
+    t2 = int(seq[1])
+    indices = slice(t1, t2+1)
     # characters to represent time series
     alpha_list = [chr(i) for i in range(97,97+int(symbols_SQ))]
     symb = ''.join(alpha_list)
-    sqtoe.testObjective.feature_p = list(iter.product(symb, repeat=5))
-    sqtoe.testObjective.feature_n = list(iter.product(symb, repeat=5))
+    sqtoe.testObjective.feature_p = list(iter.product(symb, repeat=t2-t1+1))
+    sqtoe.testObjective.feature_n = list(iter.product(symb, repeat=t2-t1+1))
     sqtoe.testObjective.setOriginalNumOfFeature()
 
     # get gradient function for the mnist

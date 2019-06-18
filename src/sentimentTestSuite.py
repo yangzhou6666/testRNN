@@ -22,7 +22,7 @@ def sentimentTrainModel():
     sm = Sentiment()
     sm.train_model()
 
-def sentimentGenerateTestSuite(r,threshold_CC,threshold_MC,symbols_SQ,TestCaseNum,minimalTest,TargMetri,CoverageStop):
+def sentimentGenerateTestSuite(r,threshold_CC,threshold_MC,symbols_SQ,seq,TestCaseNum,minimalTest,TargMetri,CoverageStop):
     r.resetTime()
     random.seed(1)
     # set oracle radius
@@ -90,12 +90,15 @@ def sentimentGenerateTestSuite(r,threshold_CC,threshold_MC,symbols_SQ,TestCaseNu
     sqtoe.symbols = int(symbols_SQ)
     # generate all the features
     # choose time steps to cover
-    indices = slice(480, 485)
+    t1 = int(seq[0])
+    t2 = int(seq[1])
+    indices = slice(t1, t2 + 1)
+    # slice(480, 485)
     # characters to represent time series
     alpha_list = [chr(i) for i in range(97, 97 + int(symbols_SQ))]
     symb = ''.join(alpha_list)
-    sqtoe.testObjective.feature_p = list(iter.product(symb, repeat=5))
-    sqtoe.testObjective.feature_n = list(iter.product(symb, repeat=5))
+    sqtoe.testObjective.feature_p = list(iter.product(symb, repeat=t2-t1+1))
+    sqtoe.testObjective.feature_n = list(iter.product(symb, repeat=t2-t1+1))
     sqtoe.testObjective.setOriginalNumOfFeature()
 
 
