@@ -5,58 +5,44 @@ sys.path.append('example')
 sys.path.append('src')
 from utils import mkdir, delete_folder
 from sentimentTestSuite import sentimentTrainModel, sentimentGenerateTestSuite
-from mnistTestSuite import mnist_lstm_train, mnist_lstm_test
+from mnistTestSuite_adv_test import mnist_lstm_train, mnist_lstm_adv_test
+from mnistTestSuite_backdoor_test import mnist_lstm_backdoor_test
 from lipoTestSuite import lipo_lstm_train, lipo_lstm_test
+from ucf101_vgg16_lstm_TestSuite import vgg16_lstm_train, vgg16_lstm_test
 from record import record
 import re
 
 def main():
     
     parser = argparse.ArgumentParser(description='testing for recurrent neural networks')
-    parser.add_argument('--model', dest='modelName', default='lipo', help='')
-    parser.add_argument('--TestCaseNum', dest='TestCaseNum', default='2000', help='')
-    parser.add_argument('--TargMetri', dest='TargMetri', default='None', help='')
-    parser.add_argument('--CoverageStop', dest='CoverageStop', default='0.9', help='')
-    parser.add_argument('--threshold_CC', dest='threshold_CC', default='6', help='')
-    parser.add_argument('--threshold_GC', dest='threshold_GC', default='0.78', help='')
-    parser.add_argument('--symbols_SQ', dest='symbols_SQ', default='2', help='')
-    parser.add_argument('--seq', dest='seq', default='[70,74]', help='')
-    parser.add_argument('--mode', dest='mode', default='test', help='')
-    parser.add_argument('--minimalTest', dest='minimalTest', default='0', help='')
+    parser.add_argument('--model', dest='modelName', choices=['mnist', 'sentiment', 'lipo', 'ucf101'], default='sentiment')
+    parser.add_argument('--TestCaseNum', dest='TestCaseNum', default='10000')
+    parser.add_argument('--Mutation', dest='Mutation', choices=['random', 'genetic'], default='random')
+    parser.add_argument('--CoverageStop', dest='CoverageStop', default='0.9')
+    parser.add_argument('--threshold_SC', dest='threshold_SC', default='0.6')
+    parser.add_argument('--threshold_BC', dest='threshold_BC', default='0.8')
+    parser.add_argument('--symbols_TC', dest='symbols_TC', default='3')
+    parser.add_argument('--seq', dest='seq', default='[70,89]')
+    parser.add_argument('--mode', dest='mode', choices=['train', 'test'], default='test')
     parser.add_argument('--output', dest='filename', default='./log_folder/record.txt', help='')
-    
     args=parser.parse_args()
-    
+    # seq:
+    # mnist [4,24]
+    # sentiment [400,499]
+    # lipo [60,79]
+    # ucf101 [0,10]
+
     modelName = args.modelName
     mode = args.mode
     filename = args.filename
-    threshold_CC = args.threshold_CC
-    threshold_MC = args.threshold_GC
-    symbols_SQ = args.symbols_SQ
+    threshold_SC = args.threshold_SC
+    threshold_BC = args.threshold_BC
+    symbols_TC = args.symbols_TC
     seq = args.seq
     seq = re.findall(r"\d+\.?\d*", seq)
-    TargMetri = args.TargMetri
+    Mutation = args.Mutation
     CoverageStop = args.CoverageStop
     TestCaseNum = args.TestCaseNum
-    minimalTest = args.minimalTest
-    # reset output folder
-    if minimalTest == '0' :
-        delete_folder("minimal_nc")
-        delete_folder("minimal_cc")
-        delete_folder("minimal_mc")
-        delete_folder("minimal_sqp")
-        delete_folder("minimal_sqn")
-        mkdir("adv_output")
-        mkdir("output")
-
-    else:
-        delete_folder("adv_output")
-        delete_folder("output")
-        mkdir("minimal_nc")
-        mkdir("minimal_cc")
-        mkdir("minimal_mc")
-        mkdir("minimal_sqp")
-        mkdir("minimal_sqn")
 
     # record time
     r = record(filename,time.time())
@@ -64,22 +50,30 @@ def main():
         if mode == 'train': 
             sentimentTrainModel()
         else: 
-            sentimentGenerateTestSuite(r,threshold_CC,threshold_MC,symbols_SQ,seq,TestCaseNum,minimalTest,TargMetri,CoverageStop)
+            sentimentGenerateTestSuite(r,threshold_SC,threshold_BC,symbols_TC,seq,TestCaseNum, Mutation, CoverageStop)
 
     elif modelName == 'mnist':
         if mode == 'train':
             mnist_lstm_train()
+        elif mode == 'backdoor':
+            mnist_lstm_backdoor_test(r,threshold_SC,threshold_BC,symbols_TC,seq,TestCaseNum, Mutation, CoverageStop)
         else:
-            mnist_lstm_test(r,threshold_CC,threshold_MC,symbols_SQ,seq,TestCaseNum,minimalTest,TargMetri,CoverageStop)
+            mnist_lstm_adv_test(r, threshold_SC, threshold_BC, symbols_TC, seq, TestCaseNum, Mutation, CoverageStop)
 
     elif modelName == 'lipo':
         if mode == 'train':
             lipo_lstm_train()
         else:
-            lipo_lstm_test(r,threshold_CC,threshold_MC,symbols_SQ,seq,TestCaseNum,minimalTest,TargMetri,CoverageStop)
-        
+            lipo_lstm_test(r,threshold_SC,threshold_BC,symbols_TC,seq,TestCaseNum, Mutation, CoverageStop)
+
+    elif modelName == 'ucf101':
+        if mode == 'train':
+            vgg16_lstm_train()
+        else:
+            vgg16_lstm_test(r, threshold_SC, threshold_BC, symbols_TC, seq, TestCaseNum, Mutation, CoverageStop)
+
     else: 
-        print("Please specify a model from {sentiment, mnist, lipo}")
+        print("Please specify a model from {sentiment, mnist, lipo, ucf101}")
     
     r.close()
 

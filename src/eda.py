@@ -2,7 +2,7 @@
 
 import random
 from random import shuffle
-random.seed(1)
+
 
 #stop words list
 stop_words = ['i', 'me', 'my', 'myself', 'we', 'our', 
@@ -169,7 +169,8 @@ def add_word(new_words):
 # main data augmentation function
 ########################################################################
 
-def eda(sentence, alpha_sr=0.1, alpha_ri=0.1, alpha_rs=0.1, p_rd=0.1, num_aug=9):
+def eda(sentence, seed, alpha_sr=0.1, alpha_ri=0.1, alpha_rs=0.1, p_rd=0.1, num_aug=9):
+	random.seed(seed)
 	
 	sentence = get_only_chars(sentence)
 	words = sentence.split(' ')
@@ -213,6 +214,6 @@ def eda(sentence, alpha_sr=0.1, alpha_ri=0.1, alpha_rs=0.1, p_rd=0.1, num_aug=9)
 		augmented_sentences = [s for s in augmented_sentences if random.uniform(0, 1) < keep_prob]
 
 	#append the original sentence
-	augmented_sentences.append(sentence)
+	# augmented_sentences.append(sentence)
 
 	return augmented_sentences

@@ -13,10 +13,10 @@ from keras.preprocessing.image import img_to_array
 from keras.applications.vgg16 import VGG16, preprocess_input
 
 
-from utils import extract_vgg16_features_live, scan_and_extract_vgg16_features
+from utils import extract_vgg16_features_live, scan_and_extract_vgg16_features, add_noise_extract_vgg16_features_live
 
 BATCH_SIZE = 64
-NUM_EPOCHS = 20
+NUM_EPOCHS = 50
 VERBOSE = 1
 HIDDEN_UNITS = 512
 MAX_ALLOWED_FRAMES = 20
@@ -61,7 +61,7 @@ class VGG16BidirectionalLSTMVideoClassifier(object):
 
         model.add(Activation('softmax'))
 
-        model.compile(loss='categorical_crossentropy', optimizer='rmsprop', metrics=['accuracy'])
+        model.compile(loss='categorical_crossentropy', optimizer='rmsprop', metrics=['aSCuracy'])
 
         return model
 
@@ -117,7 +117,7 @@ class VGG16BidirectionalLSTMVideoClassifier(object):
 
         print('build vgg16 with pre-trained model')
         vgg16_model = VGG16(include_top=self.vgg16_include_top, weights='imagenet')
-        vgg16_model.compile(optimizer=SGD(), loss='categorical_crossentropy', metrics=['accuracy'])
+        vgg16_model.compile(optimizer=SGD(), loss='categorical_crossentropy', metrics=['aSCuracy'])
         self.vgg16_model = vgg16_model
 
     def predict(self, video_file_path):
@@ -143,7 +143,7 @@ class VGG16BidirectionalLSTMVideoClassifier(object):
         architecture_file_path = self.get_architecture_file_path(model_dir_path, vgg16_include_top)
 
         self.vgg16_model = VGG16(include_top=self.vgg16_include_top, weights='imagenet')
-        self.vgg16_model.compile(optimizer=SGD(), loss='categorical_crossentropy', metrics=['accuracy'])
+        self.vgg16_model.compile(optimizer=SGD(), loss='categorical_crossentropy', metrics=['aSCuracy'])
 
         feature_dir_name = data_set_name + '-VGG16-Features'
         if not vgg16_include_top:
@@ -260,14 +260,11 @@ class VGG16LSTMVideoClassifier(object):
 
     def create_model(self):
         model = Sequential()
-
-        model.add(
-            LSTM(units=HIDDEN_UNITS, input_shape=(None, self.num_input_tokens), return_sequences=False, dropout=0.5))
+        model.add(LSTM(units=HIDDEN_UNITS, input_shape=(None, self.num_input_tokens), return_sequences=False))
         model.add(Dense(512, activation='relu'))
         model.add(Dropout(0.5))
         model.add(Dense(self.nb_classes))
         model.add(Activation('softmax'))
-
         model.compile(loss='categorical_crossentropy', optimizer='rmsprop', metrics=['accuracy'])
         return model
 
@@ -290,32 +287,45 @@ class VGG16LSTMVideoClassifier(object):
         return self.model
 
     def predict(self, video_file_path):
-        images, preprocessed_images, x = extract_vgg16_features_live(self.vgg16_model, video_file_path)
+        images, x = extract_vgg16_features_live(self.vgg16_model, video_file_path)
         frames = x.shape[0]
         if frames > self.expected_frames:
             x = x[0:self.expected_frames, :]
-            images = images[0:self.expected_frames, :]
-            preprocessed_images = preprocessed_images[0:self.expected_frames, :]
         elif frames < self.expected_frames:
             temp = np.zeros(shape=(self.expected_frames, x.shape[1]))
             temp[0:frames, :] = x
             x = temp
-            shape1 = list(images.shape)
-            shape1[0] = self.expected_frames
-            shape1 = tuple(shape1)
-            temp1 = np.zeros(shape=shape1)
-            temp1[0:frames, :] = images
-            images = temp1
-            shape2 = list(preprocessed_images.shape)
-            shape2[0] = self.expected_frames
-            shape2 = tuple(shape2)
-            temp2 = np.zeros(shape=shape2)
-            temp2[0:frames, :] = preprocessed_images
-            preprocessed_images = temp2  
+            # shape1 = list(images.shape)
+            # shape1[0] = self.expected_frames
+            # shape1 = tuple(shape1)
+            # temp1 = np.zeros(shape=shape1)
+            # temp1[0:frames, :] = images
+            # images = temp1
         last_activation = self.model.predict(np.array([x]))
         predicted_class = np.argmax(last_activation[0])
         predicted_label = self.labels_idx2word[predicted_class]
-        return images, preprocessed_images, x, predicted_label, np.max(last_activation[0]), last_activation[0]
+        return images, x, predicted_label, np.max(last_activation[0]), last_activation[0]
+
+    def predict_imgs(self, imgs, mode, seeds, variance):
+        images, x_samples = add_noise_extract_vgg16_features_live(self.vgg16_model, imgs, mode, seeds, variance)
+
+        for i in range(len(x_samples)):
+            x = x_samples[i]
+            frames = x.shape[0]
+            if frames > self.expected_frames:
+                x = x[0:self.expected_frames, :]
+                x_samples[i] = x
+            elif frames < self.expected_frames:
+                temp = np.zeros(shape=(self.expected_frames, x.shape[1]))
+                temp[0:frames, :] = x
+                x_samples[i] = temp
+
+        last_activation = self.model.predict(np.array(x_samples))
+
+        predicted_class = np.argmax(last_activation,axis=1)
+
+        predicted_label = [self.labels_idx2word[i] for i in predicted_class]
+        return images, x_samples, predicted_label, np.max(last_activation,axis=1)
         
     def preprocess_vgg16_inputs(self,images):
         import cv2

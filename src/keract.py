@@ -102,6 +102,13 @@ def cal_gradient(model,f,x,y,nodes_names):
     result = dict(zip(nodes_names, gradients_values))
     return result
 
+def neuron_boudary_judge(feature,ub,lb):
+    if feature > ub:
+        return 0
+    elif feature < lb:
+        return 1
+    else:
+        return 3
 
 
 

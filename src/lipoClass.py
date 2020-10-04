@@ -1,11 +1,14 @@
 from keras.layers import Dense, LSTM, Embedding, Dropout
 from keras import backend
+from SmilesEnumerator import SmilesEnumerator
 from keras.models import *
 import pandas as pd
+import random
 import numpy as np
 from sklearn.model_selection import train_test_split
 from utils import getActivationValue,layerName, hard_sigmoid
 from keract import get_activations_single_layer
+import keras
 
 
 def rmse(y_true, y_pred):
@@ -22,13 +25,15 @@ class lipoClass:
         self.X_test = None
         self.y_test = None
         self.model = None
+        self.sme = SmilesEnumerator()
+        self.unique_adv = []
         self.unique_chars = None
         self.char_to_int = None
         self.int_to_char = None
         self.pad = 0
         self.numAdv = 0
         self.numSamples = 0
-        self.perturbations = []
+        self.perturbations = [0]
 
     def load_data(self):
         self.data = pd.read_csv("dataset/Lipophilicity.csv")
@@ -37,6 +42,7 @@ class lipoClass:
         self.pad = len(max(self.X_orig, key=len))
         self.X = self.smile_vect(self.X_orig)
         self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(self.X,self.Y,test_size = 0.2,random_state=2)
+        self.X_orig_train = self.vect_smile(self.X_train)
 
 
     def pre_processing(self):
@@ -95,20 +101,28 @@ class lipoClass:
             smiles.append(smile)
         return np.array(smiles)
 
-    def displayInfo(self,test):
-        test = test[np.newaxis, :]
-        smiles = self.vect_smile(test)
-        output_value = np.squeeze(self.model.predict(test))
-        print("current SMILES: ",smiles[0])
-        print("current prediction: ", output_value)
-        return output_value
+    def displayInfo(self, y_test1, y_test2, unique_test):
+        diff = y_test1 - y_test2
+        adv_index = np.where(abs(diff) > 1)
+        adv_n = len(adv_index[0])
+        unique_test = unique_test[adv_index]
 
-    def updateSample(self,pred1,pred2,m,o):
-        if abs(pred1-pred2) >= 1 and o == True:
-            self.numAdv += 1
-            self.perturbations.append(m)
-        self.numSamples += 1
+        if adv_n != 0:
+            for item in unique_test:
+                if item not in self.unique_adv:
+                    self.unique_adv.append(item)
+
+        self.numAdv += adv_n
+        self.numSamples += len(y_test2)
         self.displaySuccessRate()
+
+    def mutation(self, test, test_num, seed):
+        out = []
+
+        smiles = self.vect_smile(np.array([test]))
+        new_smiles = [self.sme.randomize_smiles(smiles[0], seed+i) for i in range(test_num)]
+        new_test = self.smile_vect(np.array(new_smiles))
+        return new_test.tolist()
 
     def displaySamples(self):
         print("%s samples are considered" % (self.numSamples))
@@ -124,7 +138,7 @@ class lipoClass:
 
 
     # calculate the lstm hidden state and cell state manually
-    def cal_hidden_state(self, test):
+    def cal_hidden_state(self, test,layer):
         acx = get_activations_single_layer(self.model, np.array([test]), self.layerName(0))
         units = int(int(self.model.layers[1].trainable_weights[0].shape[1]) / 4)
         # print("No units: ", units)
@@ -167,6 +181,31 @@ class lipoClass:
             f_t[i, :] = f_gate
 
         return h_t, c_t, f_t
+
+    def cal_hidden_keras(self, test, layernum):
+        if layernum == 0:
+            acx = test
+        else:
+            acx = get_activations_single_layer(self.model, np.array(test), self.layerName(layernum - 1))
+
+        units = int(int(self.model.layers[layernum].trainable_weights[0].shape[1]) / 4)
+
+        inp = keras.layers.Input(batch_shape=(None, acx.shape[1], acx.shape[2]), name="input")
+        rnn, s, c = keras.layers.LSTM(units,
+                                      return_sequences=True,
+                                      stateful=False,
+                                      return_state=True,
+                                      name="RNN")(inp)
+        states = keras.models.Model(inputs=[inp], outputs=[s, c, rnn])
+
+        for layer in states.layers:
+            if layer.name == "RNN":
+                layer.set_weights(self.model.layers[layernum].get_weights())
+
+        h_t_keras, c_t_keras, rnn = states.predict(acx)
+
+        return rnn
+
 
 
 

@@ -162,15 +162,18 @@ class SmilesEnumerator(object):
         self.charset = "".join(charset.union(set(extra_chars)))
         self.pad = max([len(smile) for smile in smiles]) + extra_pad
         
-    def randomize_smiles(self, smiles,seed_num):
+    def randomize_smiles(self, smiles, seed_num):
         """Perform a randomization of a SMILES string
         must be RDKit sanitizable"""
-        m = Chem.MolFromSmiles(smiles)
-        ans = list(range(m.GetNumAtoms()))
         np.random.seed(seed_num)
-        np.random.shuffle(ans)
-        nm = Chem.RenumberAtoms(m,ans)
-        return Chem.MolToSmiles(nm, canonical=self.canonical, isomericSmiles=self.isomericSmiles)
+        m = Chem.MolFromSmiles(smiles)
+        if m == None:
+            return None
+        else:
+            ans = list(range(m.GetNumAtoms()))
+            np.random.shuffle(ans)
+            nm = Chem.RenumberAtoms(m,ans)
+            return Chem.MolToSmiles(nm, canonical=self.canonical, isomericSmiles=self.isomericSmiles)
 
     def transform(self, smiles):
         """Perform an enumeration (randomization) and vectorization of a Numpy array of smiles strings
@@ -211,8 +214,8 @@ class SmilesEnumerator(object):
         return np.array(smiles)
      
 if __name__ == "__main__":
-    smiles = np.array([ "CCC(=O)O[C@@]1(CC[NH+](C[C@H]1CC=C)C)c2ccccc2",
-                        "CCC[S@@](=O)c1ccc2c(c1)[nH]/c(=N/C(=O)OC)/[nH]2"]*10
+    smiles = np.array([ "SCC(=O)O[C@@]1(SC[NH+](C[C@H]1SC=C)C)c2SCSCc2",
+                        "SCC[S@@](=O)c1SCc2c(c1)[nH]/c(=N/C(=O)OC)/[nH]2"]*10
                         )
     #Test canonical SMILES vectorization
     sm_en = SmilesEnumerator(canonical=True, enum=False)

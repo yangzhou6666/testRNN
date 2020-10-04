@@ -4,7 +4,9 @@ from keras.layers import *
 from keras import *
 from keras.models import *
 import copy
+import random
 import keras.backend as K
+from eda import eda
 import numpy as np
 from keras.preprocessing import sequence 
 from utils import getActivationValue,layerName, hard_sigmoid
@@ -17,6 +19,7 @@ class Sentiment:
         self.X_test = None
         self.y_test = None
         self.model = None
+        self.unique_adv = []
         
         self.top_words = 50000
         self.word_to_id = keras.datasets.imdb.get_word_index()
@@ -42,7 +45,7 @@ class Sentiment:
         
     def load_model(self):
         self.model=load_model('models/sentiment-lstm.h5')
-        self.model.compile(loss='binary_crossentropy',optimizer='adam', metrics=['accuracy']) 
+        self.model.compile(loss='binary_crossentropy',optimizer='adam', metrics=['accuracy'])
         self.model.summary()
         
     def layerName(self,layer):
@@ -56,36 +59,42 @@ class Sentiment:
         self.model.add(Embedding(self.top_words, self.embedding_vector_length, input_length=self.max_review_length, input_shape=(self.top_words,))) 
         self.model.add(LSTM(100))
         self.model.add(Dense(1, activation='sigmoid')) 
-        self.model.compile(loss='binary_crossentropy',optimizer='adam', metrics=['accuracy']) 
+        self.model.compile(loss='binary_crossentropy',optimizer='adam', metrics=['accuracy'])
         print(self.model.summary()) 
         self.model.fit(self.X_train, self.y_train, validation_data=(self.X_test, self.y_test), nb_epoch=10, batch_size=64) 
         scores = self.model.evaluate(self.X_test, self.y_test, verbose=0)
         print("Accuracy: %.2f%%" % (scores[1]*100))
         self.model.save('models/sentiment-lstm.h5')
 
-    def getOutputResult(self,model,test):
-        functors = self.getFunctors(model)
-        return functors[-1]([test, 1.])[0][0]
+    def getOutputResult(self,test):
+        Output = self.model.predict(np.array(test))
+        return np.round(np.squeeze(Output))
 
-    def displayInfo(self,test):
-        model = self.model
-        text = self.fromIDToText(test)
-        print("review content: %s"%(text))
-        conf = get_activations_single_layer(model,np.array([test]),self.layerName(-1))
-        print("current confidence: %.2f\n"%(conf))
-        if conf >= 0.5 : 
-            return (1,conf)
-        else: 
-            return (-1,1-conf)
+    def displayInfo(self,y_test1,y_test2, m, unique_test):
+        diff = y_test1 - y_test2
+        adv_index = np.nonzero(diff)
+        adv_n = len(adv_index[0])
+        unique_test = unique_test[adv_index]
+
+        if adv_n != 0:
+            for item in unique_test:
+                if item not in self.unique_adv:
+                    self.unique_adv.append(item)
+            perturb = m*np.ones(adv_n)
+            self.perturbations = self.perturbations + perturb.tolist()
+
+        self.numAdv += adv_n
+        self.numSamples += len(y_test2)
+        self.displaySuccessRate()
 
     def pre_processing_X(self): 
         self.X_train = sequence.pad_sequences(self.X_train, maxlen=self.max_review_length) 
         self.X_test = sequence.pad_sequences(self.X_test, maxlen=self.max_review_length) 
         
     def pre_processing_x(self,tmp):
-        tmp_padded = sequence.pad_sequences([tmp], maxlen=self.max_review_length) 
+        tmp_padded = sequence.pad_sequences(tmp, maxlen=self.max_review_length)
         #print("%s. Sentiment: %s" % (review,model.predict(np.array([tmp_padded][0]))[0][0]))
-        test = np.array([tmp_padded][0])
+        test = np.array(tmp_padded)
         #print("input shape: %s"%(str(test.shape)))
         return test
         
@@ -122,13 +131,6 @@ class Sentiment:
                 tmp += self.id_to_word[id] + " "
         return tmp.strip()
 
-    def updateSample(self,label2,label1,m,o):
-        if label2 != label1 and o == True:
-            self.numAdv += 1
-            self.perturbations.append(m)
-        self.numSamples += 1
-        self.displaySuccessRate()
-
     def displaySamples(self):
         print("%s samples are considered" % (self.numSamples))
 
@@ -141,8 +143,18 @@ class Sentiment:
             print("the average perturbation of the adversarial examples is %s" % (sum(self.perturbations) / self.numAdv))
             print("the smallest perturbation of the adversarial examples is %s" % (min(self.perturbations)))
 
+
+    def mutation(self, test, test_num, seed):
+        random.seed(seed)
+        text = self.fromIDToText(test)
+        alpha = random.uniform(0.1, 0.5)
+        aug_text = eda(text, seed, alpha_sr=alpha, alpha_ri=alpha, alpha_rs=alpha, p_rd=alpha, num_aug=test_num)
+        tmp = [self.fromTextToID(text) for text in aug_text]
+        out = self.pre_processing_x(tmp)
+        return out.tolist()
+
     # calculate the lstm hidden state and cell state manually (no dropout)
-    def cal_hidden_state(self, test):
+    def cal_hidden_state(self, test, layer):
         acx = get_activations_single_layer(self.model, np.array([test]), self.layerName(0))
         units = int(int(self.model.layers[1].trainable_weights[0].shape[1]) / 4)
         # print("No units: ", units)
@@ -184,7 +196,31 @@ class Sentiment:
             h_t[i, :] = h_t0
             f_t[i, :] = f_gate
 
-        return h_t, c_t, f_t
+        return [h_t, c_t, f_t]
+
+    def cal_hidden_keras(self,test, layernum):
+        if layernum == 0:
+            acx = test
+        else:
+            acx = get_activations_single_layer(self.model, np.array(test), self.layerName(layernum - 1))
+
+        units = int(int(self.model.layers[layernum].trainable_weights[0].shape[1]) / 4)
+
+        inp = keras.layers.Input(batch_shape=(None, acx.shape[1], acx.shape[2]), name="input")
+        rnn, s, c = keras.layers.LSTM(units,
+                                return_sequences=True,
+                                stateful=False,
+                                return_state=True,
+                                name="RNN")(inp)
+        states = keras.models.Model(inputs=[inp], outputs=[s, c, rnn])
+
+        for layer in states.layers:
+            if layer.name == "RNN":
+                layer.set_weights(self.model.layers[layernum].get_weights())
+
+        h_t_keras, c_t_keras, rnn = states.predict(acx)
+
+        return rnn
 
 
 

@@ -14,7 +14,10 @@ class mnistclass:
         self.y_train = None
         self.X_test = None
         self.y_test = None
+        self.y_train_org = None
+        self.y_test_org = None
         self.model = None
+        self.unique_adv = []
         self.imagesize = 28
         self.load_data()
         self.numAdv = 0
@@ -22,11 +25,21 @@ class mnistclass:
         self.perturbations = []
 
     def load_data(self):
-        (self.X_train, self.y_train), (self.X_test, self.y_test) = mnist.load_data()
+        (self.X_train, self.y_train_org), (self.X_test, self.y_test_org) = mnist.load_data()
         self.X_train = self.X_train.astype('float32') / 255
         self.X_test = self.X_test.astype('float32') / 255
-        self.y_train = to_categorical(self.y_train)
-        self.y_test = to_categorical(self.y_test)
+        self.y_train = to_categorical(self.y_train_org)
+        self.y_test = to_categorical(self.y_test_org)
+
+        self.X_poison = copy.deepcopy(self.X_test)
+        self.X_poison[:, 24, 25] = 1.0
+        self.X_poison[:, 25, 26] = 1.0
+        self.X_poison[:, 26, 27] = 1.0
+        self.X_poison[:, 26, 25] = 1.0
+        self.X_poison[:, 24, 27] = 1.0
+
+        self.y_poison = np.zeros(self.y_test.shape, dtype=float)
+        self.y_poison[:, 6] = 1.0
 
 
     def load_model(self):
@@ -34,6 +47,8 @@ class mnistclass:
         opt = keras.optimizers.Adam(lr=1e-3, decay=1e-5)
         self.model.compile(loss='categorical_crossentropy', optimizer=opt, metrics=['accuracy'])
         self.model.summary()
+        # self.y_train = np.argmax(self.model.predict(self.X_train),axis = 1)
+        # self.y_test = np.argmax(self.model.predict(self.X_test),axis = 1)
 
     def layerName(self, layer):
         layerNames = [layer.name for layer in self.model.layers]
@@ -43,23 +58,55 @@ class mnistclass:
         self.load_data()
         self.model = Sequential()
         # input_shape = (batch_size, timesteps, input_dim)
-        self.model.add(LSTM(128, input_shape=(x_train.shape[1:]), return_sequences=True))
+        self.model.add(LSTM(128, input_shape=(self.X_train.shape[1:]), return_sequences=True))
         self.model.add(LSTM(128))
         self.model.add(Dense(32, activation='relu'))
         self.model.add(Dense(10, activation='softmax'))
         opt = keras.optimizers.Adam(lr=1e-3, decay=1e-5)
-        self.model.compile(loss='categorical_crossentropy', optimizer=opt, metrics=['accuracy'])
+        self.model.compile(loss='categorical_crossentropy', optimizer=opt, metrics=['aSCuracy'])
         self.model.fit(self.X_train, self.y_train, epochs=3, validation_data=(self.X_test, self.y_test))
         self.model.save('models/mnist_lstm.h5')
 
-    def displayInfo(self,test):
-        test = test[np.newaxis, :]
-        output_prob = np.squeeze(self.model.predict(test))
-        output_class = np.argmax(output_prob)
-        conf = np.max(output_prob)
-        print("current digit: ", output_class)
-        print("current confidence: %.2f\n"%(conf))
-        return (output_class, conf)
+    def train_embedding_hidden(self, layer, k):
+        h_train = self.cal_hidden_keras(self.X_train, layer)
+        h_train = h_train.reshape(h_train.shape[0] * h_train.shape[1], h_train.shape[2])
+
+        tsne = manifold.TSNE(n_components=k, init='pca', random_state=0)
+        h_tsne = tsne.fit_transform(h_train)
+
+        mean_z = np.mean(h_tsne,axis=0)
+        std_z = np.std(h_tsne,axis=0)
+
+        z_norm_para = np.array([mean_z, std_z])
+
+        np.save('z_norm_mnist.npy', z_norm_para)
+        joblib.dump(tsne, 't_sne_mnist.sav')
+
+
+    def displayInfo(self, test1, test2, o, m, unique_test):
+
+        output_prob1 = self.model.predict(test1)
+        output_class1 = np.argmax(output_prob1, axis= 1)
+
+        output_prob2 = self.model.predict(test2)
+        output_class2 = np.argmax(output_prob2, axis=1)
+
+        m = m[o]
+        diff = output_class2 - output_class1
+        adv_index = np.nonzero(diff[o])
+        m = m[adv_index].tolist()
+        adv_n = len(adv_index[0])
+        unique_test = unique_test[adv_index]
+        for item in unique_test:
+            if item not in self.unique_adv:
+                self.unique_adv.append(item)
+
+        self.perturbations = self.perturbations + m
+        self.numAdv += adv_n
+        self.numSamples += len(test2)
+
+        self.displaySuccessRate()
+
 
 
     def from_array_to_image(self,test):
@@ -77,10 +124,12 @@ class mnistclass:
         plt.title(classname)
         plt.show()
 
-    def updateSample(self,label2,label1,m,o):
+    def updateSample(self,label2,label1,m,o,seed_idx):
         if label2 != label1 and o == True:
             self.numAdv += 1
             self.perturbations.append(m)
+            if seed_idx in self.unique_adv:
+                self.unique_adv.remove(seed_idx)
         self.numSamples += 1
         self.displaySuccessRate()
 
@@ -96,17 +145,62 @@ class mnistclass:
             print("the average perturbation of the adversarial examples is %s" % (sum(self.perturbations) / self.numAdv))
             print("the smallest perturbation of the adversarial examples is %s" % (min(self.perturbations)))
 
-    # calculate the lstm hidden state and cell state manually (no dropout)
-    # activation function is tanh
+    def mutation(self, image, test_num, seed, mean= 0, var= 0.1):
+        '''
+            add gaussian noise to image
+        '''
+        if test_num > 1:
+            image = np.repeat(image[np.newaxis, :, :], test_num, axis=0)
+
+        np.random.seed(seed)
+        noise = np.random.normal(mean, var ** 0.5, image.shape)
+        out = image + noise
+        out = np.clip(out, 0.0, 1.0)
+
+        if test_num > 1:
+            out = [out[i] for i in range(test_num)]
+
+        return out
+
+
+
+    def cal_hidden_keras(self,test, layernum):
+        if layernum == 0:
+            acx = test
+        else:
+            acx = get_activations_single_layer(self.model, np.array(test), self.layerName(layernum - 1))
+
+        units = int(int(self.model.layers[layernum].trainable_weights[0].shape[1]) / 4)
+
+        if len(acx.shape) < len(test.shape):
+            acx = np.array([acx])
+
+        inp = keras.layers.Input(batch_shape=(None, acx.shape[1], acx.shape[2]), name="input")
+        rnn, s, c = keras.layers.LSTM(units,
+                                return_sequences=True,
+                                stateful=False,
+                                return_state=True,
+                                name="RNN")(inp)
+        states = keras.models.Model(inputs=[inp], outputs=[s, c, rnn])
+
+        for layer in states.layers:
+            if layer.name == "RNN":
+                layer.set_weights(self.model.layers[layernum].get_weights())
+
+        h_t_keras, c_t_keras, rnn = states.predict(acx)
+
+        return rnn
+
     def cal_hidden_state(self, test, layernum):
         if layernum == 0:
             acx = test
         else:
-            acx = get_activations_single_layer(self.model, np.array([test]), self.layerName(layernum-1))
+            acx = get_activations_single_layer(self.model, np.array([test]), self.layerName(layernum - 1))
 
         units = int(int(self.model.layers[layernum].trainable_weights[0].shape[1]) / 4)
         # print("No units: ", units)
-        # lstm_layer = model.layers[1]
+
+        # get weight
         W = self.model.layers[layernum].get_weights()[0]
         U = self.model.layers[layernum].get_weights()[1]
         b = self.model.layers[layernum].get_weights()[2]
@@ -144,6 +238,9 @@ class mnistclass:
             h_t[i, :] = h_t0
             f_t[i, :] = f_gate
 
-        return h_t, c_t, f_t
+        return [h_t, c_t, f_t]
+
+
+
 
 
