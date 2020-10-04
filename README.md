@@ -16,7 +16,7 @@
 1. Sentiment Analysis, 
 2. MNIST Handwritten Digits, 
 3. Lipophilicity Prediction (Physical Chemistry)
-4. UCF 101 (need to download and put into the dataset file)
+4. UCF101 (need to download and put into the dataset file)
 
 ## Software Dependencies: 
 
