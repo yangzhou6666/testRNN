@@ -50,14 +50,14 @@ We have two commands to run testing procedure and to run result analysis procedu
                    --output <output file path>
 
 where 
-1. \<modelName> can be in {sentiment,mnist,lipo,ucf101}
+1. \<modelName> can be in {sentiment, mnist, lipo, ucf101}
 2. \<Num. of Test Cases> is expected number of test cases
-3. \<Mutation Method> can be in {'random','genetic'}
-4. \<SC threshold> can be in [0,1]  
-5. \<BC threshold> can be in [0,1]
-6. \<Num. of symbols> can be in {1,2,3...}
-7. \<seq in cells to test> can be in {mnist:[4,24],sentiment:[400:499],lipo:[60,70],ucf101:[0,10]}
-8. \<modeName> can be in {train,test} with default value test 
+3. \<Mutation Method> can be in {'random', 'genetic'}
+4. \<SC threshold> can be in [0, 1]  
+5. \<BC threshold> can be in [0, 1]
+6. \<Num. of symbols> can be in {1, 2, 3...}
+7. \<seq in cells to test> can be in {mnist: [4, 24], sentiment: [400, 499], lipo: [60, 70], ucf101: [0, 10]}
+8. \<modeName> can be in {train, test} with default value test 
 9. \<output file path> specifies the path to the output file
 
 For example, we can run the following 
