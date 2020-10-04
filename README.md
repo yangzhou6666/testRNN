@@ -8,14 +8,15 @@
        
 #### Four Test metrics are used: 
 1. Neuron Coverage (NC), 
-2. Cell Coverage (SC), 
-3. Gate Coverage (BC), 
-4. Sequence Coverage (TC)
+2. Boundary Coverage (BC), 
+3. Step=wise Coverage (SC), 
+4. Temporal Coverage (TC)
 
-#### Three models trained by LSTM: 
+#### Four models trained by LSTM: 
 1. Sentiment Analysis, 
 2. MNIST Handwritten Digits, 
 3. Lipophilicity Prediction (Physical Chemistry)
+4. UCF 101 (need to download and put into the dataset file)
 
 ## Software Dependencies: 
 
@@ -41,8 +42,6 @@ We have two commands to run testing procedure and to run result analysis procedu
 
     python main.py --model <modelName> 
                    --TestCaseNum <Num. of Test Cases> 
-                   --TargMetri <Terminate Metrics> 
-                   --CoverageStop <Terminate Coverage Rate> 
                    --threshold_SC <SC threshold> 
                    --threshold_BC <BC threshold> 
                    --symbols_TC <Num. of symbols> 
@@ -52,28 +51,21 @@ We have two commands to run testing procedure and to run result analysis procedu
                    --output <output file path>
 
 where 
-1. \<modelName> can be in {sentiment,mnist,lipo}
+1. \<modelName> can be in {sentiment,mnist,lipo,ucf101}
 2. \<Num. of Test Cases> is expected number of test cases
-3. \<Termination Metrics> can be in {SC,BC,TCN,TCP}
-4. \<Termination Coverage Rate> is expected coverage rate of Termination Metric
-5. \<SC threshold> can be in [3,9]  
-6. \<BC threshold> can be in [0,1]
-7. \<Num. of symbols> can be in {2,3}
-8. \<seq in cells to test> can be in {mnist:[19,23],sentiment:[480:484],lipo:[70,74]}
+3. \<Mutation Method> can be in {'random','genetic'}
+4. \<SC threshold> can be in [0,1]  
+5. \<BC threshold> can be in [0,1]
+6. \<Num. of symbols> can be in {1,2,3...}
+7. \<seq in cells to test> can be in {mnist:[4,24],sentiment:[400:499],lipo:[60,70],ucf101:[0,10]}
 8. \<modeName> can be in {train,test} with default value test 
-9. \<Generate minimal test set> can be in {0: No, 1: Yes}
-10. \<output file path> specifies the path to the output file
+9. \<output file path> specifies the path to the output file
 
 For example, we can run the following 
 
-    python main.py --model mnist --TestCaseNum 2000 --TargMetri SC --CoverageStop 0.9 --threshold_SC 6 --threshold_BC 0.8 --symbols_TC 2 --seq [19,23] --minimalTest 0 --output log_folder/record.txt
+    python main.py --model mnist --TestCaseNum 10000 --threshold_SC 0.6 --threshold_BC 0.8 --symbols_TC 3 --seq [4,24] --output log_folder/record.txt
 
-which says that, we are working with MNIST model, and the test case generation will terminate when either the number of test cases is over 2000 or the target metric, Cell Coverage, reaches 0.9 coverage rate. We need to specify other parameters including threshold_SC, threshold_BC, symbols_TC, seq. Moreover, we do not ask for the generation of miminal test suite, and the log is generated to the file log_folder/record.txt. 
-
-#### to run result analysis procedure
-readfile.py can read the log file log_folder\record.txt and .MAT file of test conditions counting. Several figures includes the coverage updating information for all metrics and test conditions statistics plot are generated. 
-
-    python readfile.py --output log_folder/record.txt --metrcis all
+which says that, we are working with MNIST model, and the test case generation will terminate when the number of test cases is over 10000. We need to specify other parameters including threshold_SC, threshold_BC, symbols_TC, seq. Moreover, the log is generated to the file log_folder/record.txt. 
     
 ## Reference 
 
