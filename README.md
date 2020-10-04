@@ -46,8 +46,7 @@ We have two commands to run testing procedure and to run result analysis procedu
                    --threshold_BC <BC threshold> 
                    --symbols_TC <Num. of symbols> 
                    --seq <seq in cells to test>
-                   [--mode <modeName>] 
-                   --minimalTest <if generate minimal test set> 
+                   --mode <modeName>
                    --output <output file path>
 
 where 
