@@ -17,8 +17,11 @@ from testObjective import *
 import random
 
 K.set_learning_phase(1)
-K.set_image_dim_ordering('tf')
 
+# K.set_image_dim_ordering('tf')
+### replace the original one with the below statement
+### to fix "AttributeError: module 'keras.backend' has no attribute 'set_image_dim_ordering'"
+K.image_data_format() == 'channels_first'
 
 def vgg16_lstm_train():
     uvlc = ucf101_vgg16_lstm_class()
