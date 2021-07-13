@@ -10,8 +10,16 @@ from recurrent_networks import VGG16LSTMVideoClassifier
 from UCF101_loader import load_ucf, scan_ucf_with_labels
 from utils import lp_norm, getActivationValue, layerName, hard_sigmoid
     
-K.set_learning_phase(1)
+# K.set_learning_phase(1)
+'''
+I found an error:
+load_model TypeError: Expected Operation, Variable, or Tensor, got 1
 
+According to https://blog.csdn.net/m0_37052320/article/details/106058761
+I commented the K.set_learning_phase(1) to solve this issue.
+To-do: But I don't understand what does it means and when to revert it.
+Be careful!
+'''
 
 epsilon = 0.0001 
 
