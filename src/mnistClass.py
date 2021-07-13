@@ -2,7 +2,7 @@ import keras
 from keras.datasets import mnist
 from keras.layers import *
 from keras.preprocessing import image
-from keras.models import *
+from keras.models import load_model
 from keras.utils import to_categorical
 import numpy as np
 from utils import getActivationValue,layerName, hard_sigmoid

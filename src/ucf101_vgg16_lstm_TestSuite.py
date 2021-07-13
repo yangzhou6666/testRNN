@@ -16,7 +16,7 @@ from utils import lp_norm, getActivationValue, layerName, hard_sigmoid, oracle_u
 from testObjective import *
 import random
 
-K.set_learning_phase(1)
+# K.set_learning_phase(1)
 
 # K.set_image_dim_ordering('tf')
 ### replace the original one with the below statement
