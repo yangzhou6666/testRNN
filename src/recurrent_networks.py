@@ -22,7 +22,10 @@ HIDDEN_UNITS = 512
 MAX_ALLOWED_FRAMES = 20
 EMBEDDING_SIZE = 100
 
-K.set_image_dim_ordering('tf')
+# K.set_image_dim_ordering('tf')
+### replace the original one with the below statement
+### to fix "AttributeError: module 'keras.backend' has no attribute 'set_image_dim_ordering'"
+K.image_data_format() == 'channels_first'
 
 
 def generate_batch(x_samples, y_samples):
