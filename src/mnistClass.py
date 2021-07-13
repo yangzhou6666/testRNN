@@ -7,6 +7,7 @@ from keras.utils import to_categorical
 import numpy as np
 from utils import getActivationValue,layerName, hard_sigmoid
 from keract import get_activations_single_layer
+import copy
 
 class mnistclass:
     def __init__(self):
